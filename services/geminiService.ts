@@ -18,13 +18,21 @@ Nombre: DigitalBrain v3.
 
 export const getGeminiResponse = async (userMessage: string) => {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+    // Verificación segura de la API Key en el entorno del navegador
+    const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : '';
+    
+    if (!apiKey) {
+      console.warn("API Key no detectada en process.env. Verificá la configuración de Vercel.");
+      return "Estoy configurando mi cerebro. Por favor, intentá de nuevo en un segundo.";
+    }
+
+    const ai = new GoogleGenAI({ apiKey: apiKey });
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: userMessage,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
-        temperature: 0.5, // Lower temperature to keep it more professional and consistent
+        temperature: 0.5,
         topP: 0.9,
       },
     });
