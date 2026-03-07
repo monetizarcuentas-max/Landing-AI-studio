@@ -1,7 +1,5 @@
 {
-  "name": "Agencia IA - Meta Ads & Conversión Pro",
-  "description": "Una landing page de alto impacto para una agencia especializada en captación con Meta Ads y cierre de ventas mediante Inteligencia Artificial (Gemini).",
-  "requestFramePermissions": [
-    "microphone"
-  ]
+  "name": "Agencia de Automatización B2B",
+  "description": "Landing page para servicios de automatización B2B (WhatsApp, IA, Agendamiento).",
+  "requestFramePermissions": []
 }

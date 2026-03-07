@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
+import Problem from './components/Problem';
+import Solution from './components/Solution';
 import Pricing from './components/Pricing';
+import HowItWorks from './components/HowItWorks';
+import TargetAudience from './components/TargetAudience';
 import ContactForm from './components/ContactForm';
-import GeminiDemo from './components/GeminiDemo';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -14,9 +16,11 @@ const App: React.FC = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <Features />
-        <GeminiDemo />
+        <Problem />
+        <Solution />
         <Pricing />
+        <HowItWorks />
+        <TargetAudience />
         <ContactForm />
       </main>
       <Footer />

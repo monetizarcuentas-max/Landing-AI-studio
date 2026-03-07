@@ -57,8 +57,8 @@ const ContactForm: React.FC = () => {
     <section id="contact" className="py-28 px-6 bg-dark">
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-white mb-4">¿Hablamos de tus objetivos?</h2>
-          <p className="text-white/50">Agenda una auditoría gratuita de 15 minutos para ver cómo la IA puede escalar tu atención.</p>
+          <h2 className="text-4xl font-extrabold text-white mb-4">Agenda una llamada y te mostramos cómo automatizar la captación de clientes en tu empresa.</h2>
+          <p className="text-white/50">Completa el formulario para agendar un diagnóstico gratuito.</p>
         </div>
 
         <div className="glass-card p-10 rounded-4xl border-white/10 shadow-3xl">
@@ -117,9 +117,10 @@ const ContactForm: React.FC = () => {
                 <label className="block text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2.5 px-1">El servicio que necesito es:</label>
                 <div className="relative">
                     <select className="w-full px-5 py-4 rounded-2xl border-white/10 bg-white/5 text-white focus:ring-primary focus:border-primary appearance-none outline-none cursor-pointer">
-                        <option className="bg-dark">Meta Ads + Asistencia IA</option>
-                        <option className="bg-dark">Automatización de Atención al Cliente</option>
-                        <option className="bg-dark">Consultoría Estratégica (Formulario)</option>
+                        <option className="bg-dark">Plan Básico</option>
+                        <option className="bg-dark">Plan Profesional</option>
+                        <option className="bg-dark">Plan Completo</option>
+                        <option className="bg-dark">No estoy seguro, necesito asesoría</option>
                     </select>
                     <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">expand_more</span>
                 </div>
@@ -127,9 +128,9 @@ const ContactForm: React.FC = () => {
 
             <button 
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all active:scale-[0.98] glow-blue shadow-xl shadow-primary/30"
+                className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] glow-primary shadow-xl shadow-primary/30"
             >
-                Solicitar Auditoría Gratuita
+                Agendar diagnóstico gratuito
                 <span className="material-symbols-outlined">arrow_forward</span>
             </button>
             <p className="text-center text-[11px] text-white/30">Tu solicitud de consultoría será respondida a la brevedad.</p>
