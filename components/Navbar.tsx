@@ -1,5 +1,6 @@
 
 import React from 'react';
+import isologo from '../public/isologo.png';
 
 const Navbar: React.FC = () => {
   const scrollToContact = () => {
@@ -11,7 +12,7 @@ const Navbar: React.FC = () => {
       {/* Navbar Container */}
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <img src="/isologo.png" alt="Sinergia Digital Logo" className="h-10 w-auto object-contain" referrerPolicy="no-referrer" />
+          <img src={isologo} alt="Sinergia Digital Logo" className="h-10 w-auto object-contain" referrerPolicy="no-referrer" />
           <span className="font-extrabold text-2xl tracking-tight text-gray-900">
             SINERGIA <span className="font-light text-accent">DIGITAL</span>
           </span>
