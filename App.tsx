@@ -9,12 +9,14 @@ import HowItWorks from './components/HowItWorks';
 import TargetAudience from './components/TargetAudience';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import NetworkBackground from './components/NetworkBackground';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
+      <NetworkBackground />
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         <Hero />
         <Problem />
         <Solution />

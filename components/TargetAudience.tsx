@@ -2,7 +2,7 @@ import React from 'react';
 
 const TargetAudience: React.FC = () => {
   return (
-    <section className="py-24 bg-surface-dark border-y border-white/5">
+    <section className="py-24 bg-transparent border-y border-white/5">
       <div className="px-6 max-w-screen-xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1">

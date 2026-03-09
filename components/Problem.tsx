@@ -2,7 +2,7 @@ import React from 'react';
 
 const Problem: React.FC = () => {
   return (
-    <section className="py-24 bg-dark">
+    <section className="py-24 bg-transparent">
       <div className="px-6 max-w-screen-xl mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-extrabold text-white mb-6">

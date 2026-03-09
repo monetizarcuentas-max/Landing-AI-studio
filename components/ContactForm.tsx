@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <section id="contact" className="py-28 px-6 bg-dark">
+      <section id="contact" className="py-28 px-6 bg-transparent">
         <div className="max-w-xl mx-auto">
           <div className="glass-card p-12 rounded-4xl border-white/10 shadow-3xl text-center flex flex-col items-center gap-6 animate-in fade-in zoom-in duration-500">
             <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-4">
@@ -54,7 +54,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <section id="contact" className="py-28 px-6 bg-dark">
+    <section id="contact" className="py-28 px-6 bg-transparent">
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-white mb-4">Agenda una llamada y te mostramos cómo automatizar la captación de clientes en tu empresa.</h2>

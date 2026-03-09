@@ -3,7 +3,7 @@ import React from 'react';
 
 const Pricing: React.FC = () => {
   return (
-    <section className="py-24 px-6 relative bg-dark">
+    <section className="py-24 px-6 relative bg-transparent">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold text-white mb-4">

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Solution: React.FC = () => {
   return (
-    <section className="py-24 bg-surface-dark relative overflow-hidden">
+    <section className="py-24 bg-transparent relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
       
       <div className="px-6 max-w-screen-xl mx-auto relative z-10">
@@ -29,7 +29,7 @@ const Solution: React.FC = () => {
           ].map((step, idx, arr) => (
             <React.Fragment key={idx}>
               <div className="flex flex-col items-center gap-4 group relative flex-1">
-                <div className="w-20 h-20 glass-card rounded-full flex items-center justify-center border-white/10 group-hover:border-accent/50 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all duration-300 group-hover:-translate-y-2 bg-dark">
+                <div className="w-20 h-20 glass-card rounded-full flex items-center justify-center border-white/10 group-hover:border-accent/50 group-hover:shadow-[0_0_30px_rgba(0,210,255,0.3)] transition-all duration-300 group-hover:-translate-y-2 bg-transparent">
                   <span className="material-symbols-outlined text-white text-3xl group-hover:text-accent transition-colors">{step.icon}</span>
                 </div>
                 <div className="text-center">
