@@ -19,8 +19,7 @@ const Pricing: React.FC = () => {
                     <p className="text-xl font-bold text-white mb-2">Plan Básico</p>
                     <p className="text-sm text-white/50 mb-6">Ideal para empezar a automatizar.</p>
                     <div className="flex items-baseline gap-2 mb-8">
-                        <span className="text-4xl font-extrabold text-white">USD 400</span>
-                        <span className="text-sm font-medium text-white/40">- 600</span>
+                        <span className="text-4xl font-extrabold text-white">USD 497</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
                         <li className="flex items-center gap-3">
@@ -29,15 +28,11 @@ const Pricing: React.FC = () => {
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">Respuestas automáticas</span>
+                            <span className="text-sm text-white/70">Respuestas Automáticas</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">Link de agenda</span>
-                        </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">Conexión con Google Calendar</span>
+                            <span className="text-sm text-white/70">Conexión con Agenda</span>
                         </li>
                     </ul>
                     <button 
@@ -57,29 +52,32 @@ const Pricing: React.FC = () => {
                     <p className="text-xl font-bold text-white mb-2">Plan Profesional</p>
                     <p className="text-sm text-white/50 mb-6">Para empresas que buscan calificar prospectos.</p>
                     <div className="flex items-baseline gap-2 mb-8">
-                        <span className="text-4xl font-extrabold text-white">USD 700</span>
-                        <span className="text-sm font-medium text-white/40">- 900</span>
+                        <span className="text-4xl font-extrabold text-white">USD 799</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">Bot con IA</span>
+                            <span className="text-sm text-white/90 font-medium">WhatsApp con IA</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">Calificación automática de clientes</span>
+                            <span className="text-sm text-white/90 font-medium">Calificación de Clientes</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">Landing page</span>
+                            <span className="text-sm text-white/90 font-medium">Landing Page</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">Conexión con agenda</span>
+                            <span className="text-sm text-white/90 font-medium">Meta Ads</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">Recordatorios automáticos</span>
+                            <span className="text-sm text-white/90 font-medium">Conexión con Agenda</span>
+                        </li>
+                        <li className="flex items-center gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            <span className="text-sm text-white/90 font-medium">Recordatorios Automáticos</span>
                         </li>
                     </ul>
                     <button 
@@ -97,29 +95,36 @@ const Pricing: React.FC = () => {
                     <p className="text-xl font-bold text-white mb-2">Plan Completo</p>
                     <p className="text-sm text-white/50 mb-6">El sistema definitivo de captación.</p>
                     <div className="flex items-baseline gap-2 mb-8">
-                        <span className="text-4xl font-extrabold text-white">USD 1000</span>
-                        <span className="text-sm font-medium text-white/40">- 1200</span>
+                        <span className="text-4xl font-extrabold text-white">USD 997</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">Bot IA avanzado</span>
+                            <span className="text-sm text-white/70">WhatsApp con IA</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">Landing page optimizada</span>
+                            <span className="text-sm text-white/70">Calificación de Clientes</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">Sistema de captación con anuncios</span>
+                            <span className="text-sm text-white/70">Landing Page</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">Automatización completa</span>
+                            <span className="text-sm text-white/70">Meta Ads</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">Capacitación al cliente</span>
+                            <span className="text-sm text-white/70">Conexión con Agenda</span>
+                        </li>
+                        <li className="flex items-center gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            <span className="text-sm text-white/70">Recordatorios Automáticos</span>
+                        </li>
+                        <li className="flex items-center gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            <span className="text-sm text-white/70">Capacitación al Cliente</span>
                         </li>
                     </ul>
                     <button 
