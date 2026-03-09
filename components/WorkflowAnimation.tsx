@@ -1,4 +1,118 @@
 import React from 'react';
+import { motion } from 'motion/react';
+
+const nodes = [
+  {
+    id: 'meta',
+    label: 'Meta Ads',
+    finalX: 68,
+    finalY: 88,
+    icon: (
+      <svg viewBox="0 0 36 36" fill="currentColor" className="w-8 h-8 text-white drop-shadow-lg transform transition-transform group-hover:scale-110">
+        <path d="M28.18,12.31a8.42,8.42,0,0,0-5.69,2.21L18.66,18l-3.83-3.48a8.44,8.44,0,1,0,1.2,12.48l3.83-3.48,3.83,3.48a8.44,8.44,0,1,0-1.2-12.48ZM10.5,25.5A4.5,4.5,0,1,1,15,21a4.5,4.5,0,0,1-4.5,4.5Zm15,0A4.5,4.5,0,1,1,30,21a4.5,4.5,0,0,1-4.5,4.5Z" />
+      </svg>
+    ),
+    bg: 'from-blue-500 to-blue-700',
+    shadow: 'rgba(59,130,246,0.5)'
+  },
+  {
+    id: 'landing',
+    label: 'Landing Page',
+    finalX: 368,
+    finalY: 88,
+    icon: <span className="material-symbols-outlined text-white text-3xl drop-shadow-lg transform transition-transform group-hover:scale-110">web</span>,
+    bg: 'from-indigo-500 to-purple-600',
+    shadow: 'rgba(99,102,241,0.5)'
+  },
+  {
+    id: 'whatsapp',
+    label: 'WhatsApp',
+    finalX: 218,
+    finalY: 218,
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-white drop-shadow-lg transform transition-transform group-hover:scale-110">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+      </svg>
+    ),
+    bg: 'from-green-400 to-green-600',
+    shadow: 'rgba(34,197,94,0.5)'
+  },
+  {
+    id: 'ia',
+    label: 'Calificación IA',
+    finalX: 68,
+    finalY: 348,
+    icon: (
+      <div className="relative flex items-center justify-center transform transition-transform group-hover:scale-110">
+        <span className="material-symbols-outlined text-white text-3xl drop-shadow-lg">forum</span>
+        <span className="material-symbols-outlined text-accent text-xl absolute -bottom-2 -right-2 drop-shadow-lg font-bold">settings</span>
+      </div>
+    ),
+    bg: 'from-blue-600 to-indigo-800',
+    shadow: 'rgba(79,70,229,0.5)'
+  },
+  {
+    id: 'calendar',
+    label: 'Reunión Confirmada',
+    finalX: 368,
+    finalY: 348,
+    icon: (
+      <div className="relative flex items-center justify-center transform transition-transform group-hover:scale-110">
+        <span className="material-symbols-outlined text-white text-3xl drop-shadow-lg">calendar_month</span>
+        <span className="material-symbols-outlined text-green-400 text-xl absolute -bottom-2 -right-2 drop-shadow-lg font-bold bg-dark/50 rounded-full">check_circle</span>
+      </div>
+    ),
+    bg: 'from-orange-400 to-orange-600',
+    shadow: 'rgba(249,115,22,0.5)'
+  }
+];
+
+const paths = [
+  "M 100 120 Q 250 80 400 120",
+  "M 400 120 Q 380 200 250 250",
+  "M 250 250 Q 120 300 100 380",
+  "M 100 380 Q 250 420 400 380"
+];
+
+const T = 13.5; // Total loop duration
+
+const getNodeAnimation = (i: number, finalX: number, finalY: number) => {
+  const start = (i * 2.5) / T;
+  const peak = (i * 2.5 + 0.5) / T;
+  const settle = (i * 2.5 + 1.5) / T;
+  const fade = 12.5 / T;
+  
+  if (i === 0) {
+    return {
+      times: [0, peak, settle, fade, 1],
+      opacity: [0, 1, 1, 1, 0],
+      scale: [0, 1.8, 1, 1, 0],
+      x: [218, 218, finalX, finalX, finalX],
+      y: [218, 218, finalY, finalY, finalY],
+    };
+  }
+
+  return {
+    times: [0, start, peak, settle, fade, 1],
+    opacity: [0, 0, 1, 1, 1, 0],
+    scale: [0, 0, 1.8, 1, 1, 0],
+    x: [218, 218, 218, finalX, finalX, finalX],
+    y: [218, 218, 218, finalY, finalY, finalY],
+  };
+};
+
+const getPathAnimation = (i: number) => {
+  const nodeIdx = i + 1;
+  const startDraw = (nodeIdx * 2.5 + 0.5) / T;
+  const endDraw = (nodeIdx * 2.5 + 1.5) / T;
+  const fade = 12.5 / T;
+
+  return {
+    times: [0, startDraw, endDraw, fade, 1],
+    pathLength: [0, 0, 1, 1, 0],
+    opacity: [0, 0, 1, 1, 0]
+  };
+};
 
 const WorkflowAnimation: React.FC = () => {
   return (
@@ -17,11 +131,6 @@ const WorkflowAnimation: React.FC = () => {
         {/* SVG Connections */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 500 500" style={{ zIndex: 1 }}>
           <defs>
-            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#00D2FF" stopOpacity="0.2" />
-              <stop offset="50%" stopColor="#00D2FF" stopOpacity="1" />
-              <stop offset="100%" stopColor="#00D2FF" stopOpacity="0.2" />
-            </linearGradient>
             <filter id="glow-line">
               <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
               <feMerge>
@@ -31,123 +140,62 @@ const WorkflowAnimation: React.FC = () => {
             </filter>
           </defs>
 
-          {/* Paths for the Zig-Zag Flow */}
-          {/* 1. Meta Ads -> Landing Page */}
-          <path id="path1" d="M 100 120 Q 250 80 400 120" fill="none" stroke="rgba(0, 210, 255, 0.2)" strokeWidth="2" strokeDasharray="4 4" className="animate-[pulse_3s_infinite]" />
+          {paths.map((d, i) => (
+            <motion.path
+              key={`path-${i}`}
+              d={d}
+              fill="none"
+              stroke="#00D2FF"
+              strokeWidth="3"
+              strokeLinecap="round"
+              filter="url(#glow-line)"
+              animate={getPathAnimation(i)}
+              transition={{ duration: T, repeat: Infinity, ease: "easeInOut" }}
+            />
+          ))}
           
-          {/* 2. Landing Page -> WhatsApp */}
-          <path id="path2" d="M 400 120 Q 380 200 250 250" fill="none" stroke="rgba(0, 210, 255, 0.2)" strokeWidth="2" strokeDasharray="4 4" className="animate-[pulse_3s_infinite]" />
-          
-          {/* 3. WhatsApp -> Calificación IA */}
-          <path id="path3" d="M 250 250 Q 120 300 100 380" fill="none" stroke="rgba(0, 210, 255, 0.2)" strokeWidth="2" strokeDasharray="4 4" className="animate-[pulse_3s_infinite]" />
-          
-          {/* 4. Calificación IA -> Reunión Confirmada */}
-          <path id="path4" d="M 100 380 Q 250 420 400 380" fill="none" stroke="rgba(0, 210, 255, 0.2)" strokeWidth="2" strokeDasharray="4 4" className="animate-[pulse_3s_infinite]" />
-
-          {/* Animated Data Packets (Glowing Circles moving along paths) */}
-          <circle r="4" fill="#00D2FF" filter="url(#glow-line)">
-            <animateMotion dur="2s" repeatCount="indefinite" path="M 100 120 Q 250 80 400 120" />
-          </circle>
-          <circle r="4" fill="#00D2FF" filter="url(#glow-line)">
-            <animateMotion dur="2s" repeatCount="indefinite" path="M 400 120 Q 380 200 250 250" begin="0.5s" />
-          </circle>
-          <circle r="4" fill="#00D2FF" filter="url(#glow-line)">
-            <animateMotion dur="2s" repeatCount="indefinite" path="M 250 250 Q 120 300 100 380" begin="1s" />
-          </circle>
-          <circle r="4" fill="#00D2FF" filter="url(#glow-line)">
-            <animateMotion dur="2s" repeatCount="indefinite" path="M 100 380 Q 250 420 400 380" begin="1.5s" />
-          </circle>
-          
-          {/* Extra packets for more activity */}
-          <circle r="3" fill="#ffffff" filter="url(#glow-line)">
-            <animateMotion dur="2s" repeatCount="indefinite" path="M 100 120 Q 250 80 400 120" begin="1s" />
-          </circle>
-          <circle r="3" fill="#ffffff" filter="url(#glow-line)">
-            <animateMotion dur="2s" repeatCount="indefinite" path="M 400 120 Q 380 200 250 250" begin="1.5s" />
-          </circle>
-          <circle r="3" fill="#ffffff" filter="url(#glow-line)">
-            <animateMotion dur="2s" repeatCount="indefinite" path="M 250 250 Q 120 300 100 380" begin="2s" />
-          </circle>
-          <circle r="3" fill="#ffffff" filter="url(#glow-line)">
-            <animateMotion dur="2s" repeatCount="indefinite" path="M 100 380 Q 250 420 400 380" begin="0.5s" />
-          </circle>
+          {/* Dashed background paths (always visible but faint) */}
+          {paths.map((d, i) => (
+            <path
+              key={`bg-path-${i}`}
+              d={d}
+              fill="none"
+              stroke="rgba(255, 255, 255, 0.05)"
+              strokeWidth="2"
+              strokeDasharray="4 4"
+            />
+          ))}
         </svg>
 
         {/* Nodes Container */}
         <div className="absolute inset-0 w-full h-full" style={{ zIndex: 2 }}>
-          
-          {/* Node 1: Meta Ads (Top Left) */}
-          <div className="absolute top-[88px] left-[68px] flex flex-col items-center gap-3 animate-float" style={{ animationDelay: '0s' }}>
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 p-[1px] shadow-[0_0_20px_rgba(59,130,246,0.4)]">
-              <div className="w-full h-full bg-dark/90 backdrop-blur-md rounded-2xl flex items-center justify-center">
-                <span className="material-symbols-outlined text-blue-400 text-3xl">ads_click</span>
+          {nodes.map((node, i) => (
+            <motion.div
+              key={node.id}
+              className="absolute top-0 left-0 flex flex-col items-center gap-3 group z-10"
+              animate={getNodeAnimation(i, node.finalX, node.finalY)}
+              transition={{ duration: T, repeat: Infinity, ease: "easeInOut" }}
+            >
+              {/* 3D Icon Container */}
+              <div 
+                className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${node.bg} p-[1px] relative transform-gpu`}
+                style={{
+                  boxShadow: `0 15px 25px ${node.shadow}, inset 0 4px 8px rgba(255,255,255,0.4), inset 0 -4px 8px rgba(0,0,0,0.3)`
+                }}
+              >
+                <div className="w-full h-full bg-dark/30 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/20">
+                  {node.icon}
+                </div>
               </div>
-            </div>
-            <span className="text-[10px] font-bold text-white/80 uppercase tracking-wider bg-dark/80 px-2.5 py-1 rounded-md border border-white/5 backdrop-blur-sm">Meta Ads</span>
-          </div>
-
-          {/* Node 2: Landing Page (Top Right) */}
-          <div className="absolute top-[88px] right-[68px] flex flex-col items-center gap-3 animate-float" style={{ animationDelay: '0.5s' }}>
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 p-[1px] shadow-[0_0_20px_rgba(99,102,241,0.4)]">
-              <div className="w-full h-full bg-dark/90 backdrop-blur-md rounded-2xl flex items-center justify-center">
-                <span className="material-symbols-outlined text-indigo-400 text-3xl">web</span>
-              </div>
-            </div>
-            <span className="text-[10px] font-bold text-white/80 uppercase tracking-wider bg-dark/80 px-2.5 py-1 rounded-md border border-white/5 backdrop-blur-sm">Landing Page</span>
-          </div>
-
-          {/* Node 3: WhatsApp (Center) */}
-          <div className="absolute top-[218px] left-[218px] flex flex-col items-center gap-3 animate-pulse-slow">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400 to-green-600 p-[1px] shadow-[0_0_20px_rgba(34,197,94,0.4)]">
-              <div className="w-full h-full bg-dark/90 backdrop-blur-md rounded-2xl flex items-center justify-center">
-                <span className="material-symbols-outlined text-green-400 text-3xl">forum</span>
-              </div>
-            </div>
-            <span className="text-[10px] font-bold text-white/80 uppercase tracking-wider bg-dark/80 px-2.5 py-1 rounded-md border border-white/5 backdrop-blur-sm">WhatsApp</span>
-          </div>
-
-          {/* Node 4: Calificación IA (Bottom Left) */}
-          <div className="absolute top-[348px] left-[68px] flex flex-col items-center gap-3 animate-float" style={{ animationDelay: '1s' }}>
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-primary p-[2px] shadow-[0_0_30px_rgba(0,210,255,0.5)]">
-              <div className="w-full h-full bg-dark/80 backdrop-blur-xl rounded-2xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-accent/10 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
-                <span className="material-symbols-outlined text-accent text-3xl relative z-10">psychology</span>
-              </div>
-            </div>
-            <span className="text-[10px] font-bold text-accent uppercase tracking-wider bg-dark/90 px-2.5 py-1 rounded-md border border-accent/30 backdrop-blur-sm text-center leading-tight shadow-[0_0_10px_rgba(0,210,255,0.2)]">Calificación IA</span>
-          </div>
-
-          {/* Node 5: Reunión Confirmada (Bottom Right) */}
-          <div className="absolute top-[348px] right-[68px] flex flex-col items-center gap-3 animate-float" style={{ animationDelay: '1.5s' }}>
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 p-[1px] shadow-[0_0_20px_rgba(249,115,22,0.4)]">
-              <div className="w-full h-full bg-dark/90 backdrop-blur-md rounded-2xl flex items-center justify-center">
-                <span className="material-symbols-outlined text-orange-400 text-3xl">event_available</span>
-              </div>
-            </div>
-            <span className="text-[10px] font-bold text-white/80 uppercase tracking-wider bg-dark/80 px-2.5 py-1 rounded-md border border-white/5 backdrop-blur-sm text-center leading-tight">Reunión<br/>Confirmada</span>
-          </div>
-          
-          {/* Floating Action Badges */}
-          <div className="absolute top-[70px] left-[200px] bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-2 py-1 flex items-center gap-1 animate-float" style={{ animationDelay: '2s' }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
-            <span className="text-[8px] font-bold text-white uppercase">Clic en Anuncio</span>
-          </div>
-          
-          <div className="absolute top-[180px] right-[120px] bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-2 py-1 flex items-center gap-1 animate-float" style={{ animationDelay: '1.2s' }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-            <span className="text-[8px] font-bold text-white uppercase">Lead Registrado</span>
-          </div>
-
-          <div className="absolute top-[290px] left-[120px] bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-2 py-1 flex items-center gap-1 animate-float" style={{ animationDelay: '0.8s' }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-            <span className="text-[8px] font-bold text-white uppercase">Filtro Automático</span>
-          </div>
-
-          <div className="absolute top-[420px] left-[210px] bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-2 py-1 flex items-center gap-1 animate-float" style={{ animationDelay: '1.8s' }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
-            <span className="text-[8px] font-bold text-white uppercase">Cita Agendada</span>
-          </div>
-
+              
+              {/* Label */}
+              <motion.span 
+                className="text-[10px] font-bold text-white/90 uppercase tracking-wider bg-dark/80 px-3 py-1.5 rounded-lg border border-white/10 backdrop-blur-md shadow-lg text-center leading-tight"
+              >
+                {node.label}
+              </motion.span>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
