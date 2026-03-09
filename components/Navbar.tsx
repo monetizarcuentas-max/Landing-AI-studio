@@ -1,6 +1,6 @@
 
 import React from 'react';
-import headerIcon from '../assets/header-icon.png';
+import { headerIconBase64 } from '../assets/header-icon';
 
 const Navbar: React.FC = () => {
   const scrollToContact = () => {
@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
       {/* Navbar Container */}
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <img src={headerIcon} alt="Icono" className="h-10 w-auto object-contain" />
+          <img src={headerIconBase64} alt="Icono" className="h-10 w-auto object-contain" />
           <span className="font-extrabold text-2xl tracking-tight text-gray-900">
             SINERGIA <span className="font-light text-accent">DIGITAL</span>
           </span>
