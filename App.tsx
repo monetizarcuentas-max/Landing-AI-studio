@@ -10,6 +10,7 @@ import TargetAudience from './components/TargetAudience';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import NetworkBackground from './components/NetworkBackground';
+import TrustPolicy from './components/TrustPolicy';
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <Pricing />
         <HowItWorks />
         <TargetAudience />
+        <TrustPolicy />
         <ContactForm />
       </main>
       <Footer />
