@@ -1,4 +1,5 @@
 import React from 'react';
+import WorkflowAnimation from './WorkflowAnimation';
 
 const Hero: React.FC = () => {
   const scrollToContact = () => {
@@ -13,7 +14,7 @@ const Hero: React.FC = () => {
 
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row items-center gap-16 lg:gap-8">
         <div className="flex-1 text-center lg:text-left animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 border-accent/20 shadow-[0_0_15px_rgba(168,85,247,0.15)]">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 border-accent/20 shadow-[0_0_15px_rgba(0,210,255,0.15)]">
             <span className="material-symbols-outlined text-accent text-sm animate-spin-slow">auto_awesome</span>
             <span className="text-[10px] md:text-xs font-bold text-accent tracking-[0.2em] uppercase">Automatización B2B</span>
           </div>
@@ -37,20 +38,13 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Hero Visual Element - Image */}
-        <div className="hidden lg:block flex-1 relative w-full h-[500px] animate-float perspective-1000">
-          <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full animate-glow"></div>
-          
+        {/* Hero Visual Element - Animated Workflow */}
+        <div className="hidden lg:block flex-1 relative w-full h-[500px] perspective-1000">
           <div 
             className="relative w-full h-full flex items-center justify-center transition-transform duration-700 hover:rotate-y-[-5deg] hover:rotate-x-[2deg]"
             style={{ transform: 'rotateY(-12deg) rotateX(5deg) rotateZ(2deg)' }}
           >
-            <img 
-              src="/hero.png" 
-              alt="Dashboard de Automatización B2B" 
-              className="relative z-10 w-full h-auto max-h-[500px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl border border-white/10"
-              referrerPolicy="no-referrer"
-            />
+            <WorkflowAnimation />
           </div>
         </div>
       </div>
