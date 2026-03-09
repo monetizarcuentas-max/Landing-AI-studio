@@ -10,10 +10,9 @@ const Navbar: React.FC = () => {
     <nav className="sticky top-0 z-50 bg-dark/80 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center glow-primary">
-            <span className="material-symbols-outlined text-white text-2xl fill-1">smart_toy</span>
-          </div>
-          <span className="font-extrabold text-xl tracking-tight text-white hidden sm:block">AutoBot B2B</span>
+          <span className="font-extrabold text-2xl tracking-tight text-white">
+            SINERGIA <span className="font-light text-accent">DIGITAL</span>
+          </span>
         </div>
         <button 
           onClick={scrollToContact}
