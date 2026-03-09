@@ -1,6 +1,6 @@
 
 import React from 'react';
-import isologo from '../public/isologo.png';
+import isologo from '../assets/isologo.png';
 
 const Navbar: React.FC = () => {
   const scrollToContact = () => {
