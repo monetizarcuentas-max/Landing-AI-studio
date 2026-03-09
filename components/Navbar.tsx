@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <img src="/isologo.svg" alt="Sinergia Digital Logo" className="h-10 w-auto object-contain" referrerPolicy="no-referrer" />
+          <img src="/isologo.png" alt="Sinergia Digital Logo" className="h-10 w-auto object-contain" referrerPolicy="no-referrer" />
           <span className="font-extrabold text-2xl tracking-tight text-gray-900">
             SINERGIA <span className="font-light text-accent">DIGITAL</span>
           </span>
