@@ -3,10 +3,13 @@ import React, { useState, useEffect } from 'react';
 
 const COUNTRIES = [
   { name: 'México', code: '+52', placeholder: '55 1234 5678' },
+  { name: 'Estados Unidos', code: '+1', placeholder: '202 555 0123' },
   { name: 'España', code: '+34', placeholder: '612 345 678' },
   { name: 'Colombia', code: '+57', placeholder: '300 123 4567' },
+  { name: 'Perú', code: '+51', placeholder: '912 345 678' },
   { name: 'Argentina', code: '+54', placeholder: '9 11 1234 5678', hint: 'Sin 0 ni 15. Formato: 9 + cod. area + numero' },
   { name: 'Chile', code: '+56', placeholder: '9 1234 5678' },
+  { name: 'Ecuador', code: '+593', placeholder: '9 1234 5678' },
 ];
 
 const ContactForm: React.FC = () => {
@@ -85,7 +88,7 @@ const ContactForm: React.FC = () => {
                                 <option key={c.name} className="bg-dark" value={c.name}>{c.name}</option>
                             ))}
                         </select>
-                        <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">expand_more</span>
+                        <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-primary">expand_more</span>
                     </div>
                 </div>
             </div>
@@ -122,7 +125,7 @@ const ContactForm: React.FC = () => {
                         <option className="bg-dark">Plan Completo</option>
                         <option className="bg-dark">No estoy seguro, necesito asesoría</option>
                     </select>
-                    <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">expand_more</span>
+                    <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-primary">expand_more</span>
                 </div>
             </div>
 

@@ -40,8 +40,8 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Hero Visual Element - Animated Workflow */}
-        <div className="w-full lg:flex-1 relative mt-16 lg:mt-0">
-          <div className="relative w-full flex items-center justify-center">
+        <div className="w-full lg:flex-1 relative mt-16 lg:mt-0 perspective-1000">
+          <div className="relative w-full flex items-center justify-center transition-transform duration-700 lg:hover:rotate-y-[-5deg] lg:hover:rotate-x-[2deg] max-lg:!transform-none" style={{ transform: 'rotateY(-15deg) rotateX(10deg) rotateZ(2deg)' }}>
             <WorkflowAnimation />
           </div>
         </div>
