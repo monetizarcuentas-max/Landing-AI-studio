@@ -72,7 +72,7 @@ const ContactForm: React.FC = () => {
                 type="submit"
                 className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] glow-primary shadow-xl shadow-primary/30"
             >
-                Agendar Gratis por Whatsapp
+                Agendar Gratis por WhatsApp
                 <span className="material-symbols-outlined">arrow_forward</span>
             </button>
             <p className="text-center text-[11px] text-white/30">Serás redirigido a nuestro WhatsApp para coordinar la reunión.</p>
