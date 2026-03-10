@@ -40,21 +40,20 @@ const steps = [
     title: 'LANDING PAGE',
     subtitle: 'CAPTACIÓN',
     icon: (
-      <div className="relative w-24 h-20 md:w-40 md:h-32 bg-dark/90 rounded-lg md:rounded-xl border border-indigo-500/40 flex flex-col p-1.5 md:p-2.5 shadow-[0_0_15px_rgba(99,102,241,0.2)] overflow-hidden">
-        <div className="flex gap-1 md:gap-1.5 mb-1.5 md:mb-2.5 border-b border-indigo-500/30 pb-1 md:pb-2">
+      <div className="relative w-20 h-28 md:w-32 md:h-44 bg-dark/90 rounded-lg md:rounded-xl border border-indigo-500/40 flex flex-col p-1.5 md:p-2.5 shadow-[0_0_15px_rgba(99,102,241,0.2)] overflow-hidden">
+        <div className="flex gap-1 md:gap-1.5 mb-1.5 md:mb-2 border-b border-indigo-500/30 pb-1 md:pb-2 shrink-0">
           <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-red-500/80"></div>
           <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-yellow-500/80"></div>
           <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-green-500/80"></div>
         </div>
-        <div className="text-[4px] md:text-[8px] text-center text-indigo-300 font-bold mb-1.5 md:mb-2.5 tracking-wide">TU SISTEMA</div>
-        <div className="flex gap-1.5 md:gap-2.5 h-full">
-          <div className="w-1/2 h-full border border-indigo-500/30 rounded md:rounded-lg flex items-center justify-center bg-indigo-500/5">
+        <div className="text-[4px] md:text-[7px] text-center text-indigo-300 font-bold mb-1.5 md:mb-2 tracking-wide shrink-0">TU SISTEMA</div>
+        <div className="flex flex-col gap-1.5 md:gap-2 h-full">
+          <div className="w-full h-1/2 border border-indigo-500/30 rounded md:rounded-lg flex items-center justify-center bg-indigo-500/5">
             <span className="material-symbols-outlined text-indigo-400/50 text-sm md:text-2xl">image</span>
           </div>
-          <div className="w-1/2 flex flex-col gap-1 md:gap-1.5">
-            <div className="w-full h-1 md:h-2 bg-indigo-500/20 rounded-sm"></div>
-            <div className="w-full h-1 md:h-2 bg-indigo-500/20 rounded-sm"></div>
-            <div className="w-3/4 h-1 md:h-2 bg-indigo-500/20 rounded-sm"></div>
+          <div className="w-full h-1/2 flex flex-col gap-1 md:gap-1.5">
+            <div className="w-full h-1 md:h-1.5 bg-indigo-500/20 rounded-sm"></div>
+            <div className="w-3/4 h-1 md:h-1.5 bg-indigo-500/20 rounded-sm"></div>
             <div className="w-full h-3 md:h-5 bg-green-500/90 rounded mt-auto flex items-center justify-center shadow-lg shadow-green-500/20">
               <span className="text-[3px] md:text-[6px] text-white font-bold">Contactar</span>
             </div>
@@ -69,8 +68,8 @@ const steps = [
     title: 'WHATSAPP',
     subtitle: 'CHATBOT 24/7',
     icon: (
-      <div className="relative w-16 h-28 md:w-24 md:h-44 bg-dark/90 rounded-xl md:rounded-[2rem] border-2 md:border-4 border-gray-800 flex flex-col p-1 md:p-2 shadow-[0_0_15px_rgba(34,197,94,0.2)] overflow-hidden">
-        <div className="flex items-center gap-1 md:gap-2 border-b border-gray-700 pb-1 md:pb-2 mb-1 md:mb-2 mt-0.5 md:mt-1 px-0.5 md:px-1">
+      <div className="relative w-20 h-28 md:w-28 md:h-44 bg-dark/90 rounded-xl md:rounded-[2rem] border-2 md:border-4 border-gray-800 flex flex-col p-1 md:p-2 shadow-[0_0_15px_rgba(34,197,94,0.2)] overflow-hidden">
+        <div className="flex items-center gap-1 md:gap-2 border-b border-gray-700 pb-1 md:pb-2 mb-1 md:mb-2 mt-0.5 md:mt-1 px-0.5 md:px-1 shrink-0">
           <div className="w-3 h-3 md:w-6 md:h-6 rounded-full bg-green-500 flex items-center justify-center shadow-md shadow-green-500/30 shrink-0">
             <span className="material-symbols-outlined text-white text-[6px] md:text-[12px]">smart_toy</span>
           </div>
@@ -96,14 +95,14 @@ const steps = [
     title: 'REUNIÓN CONFIRMADA',
     subtitle: 'RESERVA AUTOMÁTICA',
     icon: (
-      <div className="relative w-24 h-20 md:w-40 md:h-32 bg-dark/90 rounded-lg md:rounded-xl border border-accent/40 flex flex-col p-1.5 md:p-3 shadow-[0_0_15px_rgba(0,210,255,0.2)] overflow-hidden">
-        <div className="flex items-center gap-1 md:gap-2 mb-1.5 md:mb-3 border-b border-accent/20 pb-1 md:pb-2">
+      <div className="relative w-20 h-28 md:w-32 md:h-44 bg-dark/90 rounded-lg md:rounded-xl border border-accent/40 flex flex-col p-1.5 md:p-3 shadow-[0_0_15px_rgba(0,210,255,0.2)] overflow-hidden">
+        <div className="flex items-center justify-center gap-1 md:gap-2 mb-1.5 md:mb-4 border-b border-accent/20 pb-1 md:pb-2 w-full shrink-0">
           <span className="material-symbols-outlined text-accent text-[10px] md:text-xl">event</span>
-          <span className="text-[5px] md:text-[10px] text-white font-bold tracking-wider">13 MARZO</span>
+          <span className="text-[5px] md:text-[9px] text-white font-bold tracking-wider">13 MARZO</span>
         </div>
-        <div className="text-[4px] md:text-[8px] text-accent/90 font-bold text-center mb-1 md:mb-1.5 tracking-wide">REUNIÓN CONFIRMADA</div>
-        <div className="text-[4px] md:text-[8px] text-white font-medium text-center mb-1.5 md:mb-2.5">DEMO DE SISTEMA</div>
-        <div className="text-[4px] md:text-[8px] text-white/80 text-center bg-white/5 py-1 md:py-1.5 rounded md:rounded-md border border-white/5">11:00 AM</div>
+        <div className="text-[4px] md:text-[7px] text-accent/90 font-bold text-center mb-1 md:mb-2 tracking-wide">REUNIÓN CONFIRMADA</div>
+        <div className="text-[4px] md:text-[7px] text-white font-medium text-center mb-1.5 md:mb-3">DEMO DE SISTEMA</div>
+        <div className="text-[4px] md:text-[7px] text-white/80 text-center bg-white/5 py-1 md:py-2 px-2 md:px-4 rounded md:rounded-md border border-white/5 w-full mt-auto mb-1 md:mb-2">11:00 AM</div>
         <div className="absolute -bottom-2 -right-2 md:-bottom-3 md:-right-3 w-4 h-4 md:w-8 md:h-8 rounded-full bg-accent flex items-center justify-center border md:border-2 border-dark shadow-[0_0_10px_rgba(0,210,255,0.5)]">
           <span className="material-symbols-outlined text-dark text-[8px] md:text-sm font-bold">check</span>
         </div>
@@ -140,13 +139,13 @@ const WorkflowAnimation: React.FC = () => {
       </div>
 
       <div 
-        className="flex flex-row items-center justify-center gap-1 md:gap-4 w-full scale-[0.85] sm:scale-100 origin-center"
+        className="flex flex-row items-center justify-center gap-1 md:gap-2 w-full scale-[0.85] sm:scale-100 origin-center"
         style={{ transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)' }}
       >
         {steps.map((step, i) => (
           <React.Fragment key={step.id}>
             <motion.div
-              className="flex flex-col items-center z-10 w-full max-w-[80px] md:max-w-[220px]"
+              className="flex flex-col items-center z-10 w-full max-w-[80px] md:max-w-[180px]"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: i * 0.2, ease: "easeOut" }}
