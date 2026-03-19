@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="py-20 px-6 border-t border-white/5 bg-transparent">
       <div className="max-w-screen-xl mx-auto flex flex-col items-center">
@@ -12,14 +15,14 @@ const Footer: React.FC = () => {
         </div>
         
         <nav className="flex flex-wrap justify-center gap-8 mb-12 text-sm text-white/40 font-medium">
-            <a href="#" className="hover:text-white transition-colors">Inicio</a>
-            <a href="#contact" className="hover:text-white transition-colors">Precios</a>
-            <a href="#contact" className="hover:text-white transition-colors">Contacto</a>
+            <a href="#" className="hover:text-white transition-colors">{t('footer.home')}</a>
+            <a href="#contact" className="hover:text-white transition-colors">{t('footer.pricing')}</a>
+            <a href="#contact" className="hover:text-white transition-colors">{t('footer.contact')}</a>
         </nav>
 
         <p className="text-[12px] text-white/30 text-center leading-relaxed">
-          © 2024 Sinergia Digital - Líderes en Automatización de Captación.<br/>
-          Transformando prospectos en clientes mediante inteligencia artificial.
+          {t('footer.copy1')}<br/>
+          {t('footer.copy2')}
         </p>
       </div>
     </footer>

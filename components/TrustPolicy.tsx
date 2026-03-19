@@ -1,15 +1,18 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const TrustPolicy: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-12 px-6 bg-transparent relative z-10">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
           <span className="text-sm font-bold tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-accent to-blue-400 mb-2 inline-block">
-            Política de transparencia
+            {t('trust.badge')}
           </span>
           <h2 className="text-4xl font-extrabold text-white">
-            Propiedad total para el cliente
+            {t('trust.title')}
           </h2>
         </div>
 
@@ -29,15 +32,15 @@ const TrustPolicy: React.FC = () => {
               {[
                 {
                   icon: 'manage_accounts',
-                  text: 'Las cuentas siempre quedan a nombre del cliente'
+                  text: t('trust.1')
                 },
                 {
                   icon: 'settings_power',
-                  text: 'El sistema sigue funcionando incluso si cancelas el mantenimiento'
+                  text: t('trust.2')
                 },
                 {
                   icon: 'contract_delete',
-                  text: 'Sin contratos de permanencia'
+                  text: t('trust.3')
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex flex-col items-center gap-4 group/item">
@@ -56,7 +59,7 @@ const TrustPolicy: React.FC = () => {
             <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6"></div>
 
             <p className="text-base md:text-lg text-white/90 font-medium italic">
-              "Trabajamos para que te quedes por el valor que entregamos, no por obligación."
+              {t('trust.quote')}
             </p>
           </div>
         </div>

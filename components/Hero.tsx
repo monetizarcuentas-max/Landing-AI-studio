@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
             <span className="text-[10px] md:text-xs font-bold text-accent tracking-[0.2em] uppercase">{t('hero.badge')}</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 tracking-tight text-white break-words">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 tracking-tight text-white">
             {t('hero.title1')}<span className="gradient-text-primary">{t('hero.title2')}</span>
           </h1>
           

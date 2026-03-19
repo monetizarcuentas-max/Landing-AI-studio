@@ -1,15 +1,18 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Problem: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-transparent">
       <div className="px-6 max-w-screen-xl mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-extrabold text-white mb-6">
-            ¿Por qué estás perdiendo clientes todos los días?
+            {t('problem.title')}
           </h2>
           <p className="text-white/50 text-xl leading-relaxed">
-            Las empresas invierten en marketing, pero fallan en el seguimiento y la atención inmediata.
+            {t('problem.subtitle')}
           </p>
         </div>
 
@@ -17,23 +20,23 @@ const Problem: React.FC = () => {
           {[
             {
               icon: 'schedule',
-              title: 'Tardan en responder',
-              desc: 'Tus clientes potenciales se enfrían si no reciben respuesta en los primeros 5 minutos.'
+              title: t('problem.1.title'),
+              desc: t('problem.1.desc')
             },
             {
               icon: 'person_off',
-              title: 'Pierden consultas',
-              desc: 'Mensajes de WhatsApp que quedan sin leer o se pierden entre cientos de chats.'
+              title: t('problem.2.title'),
+              desc: t('problem.2.desc')
             },
             {
               icon: 'trending_down',
-              title: 'Sin seguimiento',
-              desc: 'No hay un sistema que retome el contacto con clientes que preguntaron pero no compraron.'
+              title: t('problem.3.title'),
+              desc: t('problem.3.desc')
             },
             {
               icon: 'event_busy',
-              title: 'Caos en la agenda',
-              desc: 'Turnos superpuestos, olvidos y cancelaciones de último momento sin reprogramación.'
+              title: t('problem.4.title'),
+              desc: t('problem.4.desc')
             }
           ].map((item, idx) => (
             <div key={idx} className="glass-card p-8 rounded-3xl border-white/10 flex flex-col items-center text-center hover:border-accent/40 transition-colors">

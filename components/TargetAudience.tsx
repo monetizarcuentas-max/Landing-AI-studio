@@ -1,25 +1,28 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const TargetAudience: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-transparent border-y border-white/5">
       <div className="px-6 max-w-screen-xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1">
             <h2 className="text-4xl font-extrabold text-white mb-6">
-              Para quién es este servicio
+              {t('target.title')}
             </h2>
             <p className="text-white/50 text-xl leading-relaxed mb-8">
-              Nuestra solución está diseñada para empresas de servicios que dependen de la agendación de citas y la atención rápida al cliente.
+              {t('target.subtitle')}
             </p>
             <ul className="grid grid-cols-2 gap-4">
               {[
-                'Clínicas y Consultorios',
-                'Inmobiliarias',
-                'Abogados y Estudios',
-                'Consultores B2B',
-                'Academias y Formación',
-                'Servicios para el Hogar'
+                t('target.i1'),
+                t('target.i2'),
+                t('target.i3'),
+                t('target.i4'),
+                t('target.i5'),
+                t('target.i6')
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-accent text-sm">check_circle</span>
@@ -37,8 +40,8 @@ const TargetAudience: React.FC = () => {
                         <span className="material-symbols-outlined text-primary">calendar_month</span>
                     </div>
                     <div>
-                        <div className="text-white font-bold">Nuevo turno agendado</div>
-                        <div className="text-white/50 text-xs">Hace 2 minutos</div>
+                        <div className="text-white font-bold">{t('target.c1.title')}</div>
+                        <div className="text-white/50 text-xs">{t('target.c1.time')}</div>
                     </div>
                  </div>
                  <div className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl hover:bg-white/10 transition-colors cursor-default">
@@ -46,8 +49,8 @@ const TargetAudience: React.FC = () => {
                         <span className="material-symbols-outlined text-accent">forum</span>
                     </div>
                     <div>
-                        <div className="text-white font-bold">Consulta respondida por IA</div>
-                        <div className="text-white/50 text-xs">Hace 5 minutos</div>
+                        <div className="text-white font-bold">{t('target.c2.title')}</div>
+                        <div className="text-white/50 text-xs">{t('target.c2.time')}</div>
                     </div>
                  </div>
                  <div className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl hover:bg-white/10 transition-colors cursor-default">
@@ -55,8 +58,8 @@ const TargetAudience: React.FC = () => {
                         <span className="material-symbols-outlined text-emerald-400">check_circle</span>
                     </div>
                     <div>
-                        <div className="text-white font-bold">Recordatorio enviado</div>
-                        <div className="text-white/50 text-xs">Hace 15 minutos</div>
+                        <div className="text-white font-bold">{t('target.c3.title')}</div>
+                        <div className="text-white/50 text-xs">{t('target.c3.time')}</div>
                     </div>
                  </div>
                </div>

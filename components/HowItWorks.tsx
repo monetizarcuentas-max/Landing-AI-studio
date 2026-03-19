@@ -1,15 +1,18 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const HowItWorks: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-transparent">
       <div className="px-6 max-w-screen-xl mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-extrabold text-white mb-6">
-            ¿Cómo funciona?
+            {t('how.title')}
           </h2>
           <p className="text-white/50 text-xl leading-relaxed">
-            Un proceso simple y transparente para transformar tu captación de clientes.
+            {t('how.subtitle')}
           </p>
         </div>
 
@@ -17,23 +20,23 @@ const HowItWorks: React.FC = () => {
           {[
             {
               step: '01',
-              title: 'Analizamos tu negocio',
-              desc: 'Entendemos tu proceso de ventas actual y detectamos cuellos de botella.'
+              title: t('how.1.title'),
+              desc: t('how.1.desc')
             },
             {
               step: '02',
-              title: 'Diseñamos el sistema',
-              desc: 'Creamos la estrategia de captación y el flujo de conversación ideal.'
+              title: t('how.2.title'),
+              desc: t('how.2.desc')
             },
             {
               step: '03',
-              title: 'Automatizamos',
-              desc: 'Implementamos el bot de WhatsApp, la IA y conectamos tu agenda.'
+              title: t('how.3.title'),
+              desc: t('how.3.desc')
             },
             {
               step: '04',
-              title: 'Recibes consultas',
-              desc: 'Tu empresa empieza a recibir turnos y consultas calificadas automáticamente.'
+              title: t('how.4.title'),
+              desc: t('how.4.desc')
             }
           ].map((item, idx) => (
             <div key={idx} className="relative">

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Solution: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-transparent relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
@@ -8,10 +11,10 @@ const Solution: React.FC = () => {
       <div className="px-6 max-w-screen-xl mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <h2 className="text-4xl font-extrabold text-white mb-6">
-            El sistema de captación <span className="gradient-text-primary">automatizado</span>
+            {t('solution.title1')} <span className="gradient-text-primary">{t('solution.title2')}</span>
           </h2>
           <p className="text-white/50 text-xl leading-relaxed">
-            Implementamos un flujo continuo que convierte desconocidos en reuniones agendadas, sin intervención humana.
+            {t('solution.subtitle')}
           </p>
         </div>
 
@@ -22,10 +25,10 @@ const Solution: React.FC = () => {
           </div>
 
           {[
-            { icon: 'campaign', label: 'Anuncios de Meta Ads', sublabel: 'Conversiones de lead automáticas' },
-            { icon: 'web', label: 'Landing Page', sublabel: 'Captación' },
-            { icon: 'forum', label: 'WhatsApp', sublabel: 'Chatbot 24/7' },
-            { icon: 'event_available', label: 'Reunión Confirmada', sublabel: 'Demo de sistema reserva de calendario automática' }
+            { icon: 'campaign', label: t('solution.1.label'), sublabel: t('solution.1.sub') },
+            { icon: 'web', label: t('solution.2.label'), sublabel: t('solution.2.sub') },
+            { icon: 'forum', label: t('solution.3.label'), sublabel: t('solution.3.sub') },
+            { icon: 'event_available', label: t('solution.4.label'), sublabel: t('solution.4.sub') }
           ].map((step, idx, arr) => (
             <React.Fragment key={idx}>
               <div className="flex flex-col items-center gap-4 group relative flex-1">
