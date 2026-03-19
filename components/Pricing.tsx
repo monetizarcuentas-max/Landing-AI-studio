@@ -19,7 +19,7 @@ const Pricing: React.FC = () => {
                     <p className="text-xl font-bold text-white mb-2">Plan Básico</p>
                     <p className="text-sm text-white/50 mb-6">Ideal para empezar a automatizar.</p>
                     <div className="flex items-baseline gap-2 mb-8">
-                        <span className="text-4xl font-extrabold text-white">USD 497</span>
+                        <span className="text-4xl font-extrabold text-white">USD 587</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
                         <li className="flex items-center gap-3">
@@ -32,7 +32,15 @@ const Pricing: React.FC = () => {
                         </li>
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">Conexión con Agenda</span>
+                            <span className="text-sm text-white/70">Calificación de Clientes</span>
+                        </li>
+                        <li className="flex items-center gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            <span className="text-sm text-white/70">Meta Ads</span>
+                        </li>
+                        <li className="flex items-center gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            <span className="text-sm text-white/70">Soporte Técnico</span>
                         </li>
                     </ul>
                     <button 
@@ -52,7 +60,7 @@ const Pricing: React.FC = () => {
                     <p className="text-xl font-bold text-white mb-2">Plan Profesional</p>
                     <p className="text-sm text-white/50 mb-6">Para empresas que buscan calificar prospectos.</p>
                     <div className="flex items-baseline gap-2 mb-8">
-                        <span className="text-4xl font-extrabold text-white">USD 799</span>
+                        <span className="text-4xl font-extrabold text-white">USD 997</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
                         <li className="flex items-center gap-3">
@@ -79,6 +87,10 @@ const Pricing: React.FC = () => {
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
                             <span className="text-sm text-white/90 font-medium">Recordatorios Automáticos</span>
                         </li>
+                        <li className="flex items-center gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            <span className="text-sm text-white/90 font-medium">Soporte Técnico</span>
+                        </li>
                     </ul>
                     <button 
                       onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -95,7 +107,7 @@ const Pricing: React.FC = () => {
                     <p className="text-xl font-bold text-white mb-2">Plan Completo</p>
                     <p className="text-sm text-white/50 mb-6">El sistema definitivo de captación.</p>
                     <div className="flex items-baseline gap-2 mb-8">
-                        <span className="text-4xl font-extrabold text-white">USD 997</span>
+                        <span className="text-4xl font-extrabold text-white">USD 1497</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
                         <li className="flex items-center gap-3">
@@ -125,6 +137,10 @@ const Pricing: React.FC = () => {
                         <li className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
                             <span className="text-sm text-white/70">Capacitación al Cliente</span>
+                        </li>
+                        <li className="flex items-center gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            <span className="text-sm text-white/70">Soporte Técnico</span>
                         </li>
                     </ul>
                     <button 

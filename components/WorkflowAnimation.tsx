@@ -139,7 +139,7 @@ const WorkflowAnimation: React.FC = () => {
       </div>
 
       <div 
-        className="flex flex-row items-center justify-center gap-1 md:gap-1 lg:gap-2 w-full scale-[0.85] sm:scale-90 lg:scale-95 xl:scale-100 origin-center"
+        className="flex flex-row items-center justify-center gap-1 md:gap-1 lg:gap-2 w-full scale-[0.95] sm:scale-100 lg:scale-95 xl:scale-100 origin-center"
         style={{ transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)' }}
       >
         {steps.map((step, i) => (
