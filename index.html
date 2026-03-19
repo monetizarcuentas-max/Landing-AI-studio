@@ -5,118 +5,12 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Sinergia Digital - Automatizaciones</title>
-    <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/favicon.png?v=3" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#001B3A", // Deep Navy Blue from logo
-                        accent: "#00D2FF", // Bright Cyan/Teal from logo
-                        dark: "#050510", // Very dark blue/black
-                        "surface-dark": "#0A0A1A",
-                    },
-                    fontFamily: {
-                        display: ["'Plus Jakarta Sans'", "sans-serif"],
-                        body: ["'Plus Jakarta Sans'", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "1rem",
-                        '2xl': "1.5rem",
-                        '3xl': "2rem",
-                        '4xl': "2.5rem",
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'glow': 'glow 3s ease-in-out infinite alternate',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        glow: {
-                            '0%': { boxShadow: '0 0 10px rgba(0, 210, 255, 0.2)' },
-                            '100%': { boxShadow: '0 0 30px rgba(0, 210, 255, 0.6)' },
-                        }
-                    }
-                },
-            },
-        };
-    </script>
-    <style type="text/tailwindcss">
-        @layer base {
-            body {
-                @apply bg-[#000B18] text-white font-body selection:bg-accent/30;
-                min-height: 100dvh;
-                background-image: 
-                    radial-gradient(circle at 50% 0%, rgba(0, 210, 255, 0.15) 0%, transparent 60%),
-                    radial-gradient(circle at 80% 80%, rgba(0, 27, 58, 0.8) 0%, transparent 50%),
-                    linear-gradient(to right, rgba(0, 210, 255, 0.03) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
-                background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
-                background-attachment: fixed;
-            }
-        }
-        @layer components {
-            .immersive-gradient {
-                background: radial-gradient(circle at 0% 0%, rgba(0, 27, 58, 0.4) 0%, transparent 50%),
-                            radial-gradient(circle at 100% 100%, rgba(0, 210, 255, 0.15) 0%, transparent 50%),
-                            linear-gradient(180deg, transparent 0%, rgba(0, 11, 24, 0.8) 100%);
-            }
-            .glass-card {
-                @apply bg-white/5 backdrop-blur-xl border border-white/10;
-            }
-            .glassmorphic-icon {
-                background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-                @apply backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0,210,255,0.2)];
-            }
-            .glow-primary {
-                @apply shadow-[0_0_20px_rgba(0,210,255,0.4)];
-            }
-            .gradient-text-primary {
-                @apply bg-clip-text text-transparent bg-gradient-to-br from-accent to-primary;
-            }
-            .hide-scrollbar::-webkit-scrollbar {
-                display: none;
-            }
-            .hide-scrollbar {
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-            }
-            .perspective-1000 {
-                perspective: 1000px;
-            }
-            .rotate-y-\[-12deg\] {
-                transform: rotateY(-12deg);
-            }
-            .rotate-x-\[5deg\] {
-                transform: rotateX(5deg);
-            }
-            .rotate-z-\[2deg\] {
-                transform: rotateZ(2deg);
-            }
-            .hover\:rotate-y-\[-5deg\]:hover {
-                transform: rotateY(-5deg);
-            }
-            .hover\:rotate-x-\[2deg\]:hover {
-                transform: rotateX(2deg);
-            }
-        }
-    </style>
 </head>
 <body>
     <div id="root"></div>
