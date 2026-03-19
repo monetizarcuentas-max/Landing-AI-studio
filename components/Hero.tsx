@@ -1,8 +1,11 @@
 
 import React from 'react';
 import WorkflowAnimation from './WorkflowAnimation';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -17,15 +20,15 @@ const Hero: React.FC = () => {
         <div className="flex-1 text-center lg:text-left animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 border-accent/20 shadow-[0_0_15px_rgba(0,210,255,0.15)]">
             <span className="material-symbols-outlined text-accent text-sm animate-spin-slow">auto_awesome</span>
-            <span className="text-[10px] md:text-xs font-bold text-accent tracking-[0.2em] uppercase">Automatización B2B</span>
+            <span className="text-[10px] md:text-xs font-bold text-accent tracking-[0.2em] uppercase">{t('hero.badge')}</span>
           </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 tracking-tight text-white">
-            Convierte más consultas en clientes <span className="gradient-text-primary">automáticamente</span>
+            {t('hero.title1')}<span className="gradient-text-primary">{t('hero.title2')}</span>
           </h1>
           
           <p className="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0">
-            Automatizamos WhatsApp, respuestas con IA y agendamiento de citas para que tu empresa <span className="text-white font-semibold">nunca pierda una oportunidad.</span>
+            {t('hero.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -33,7 +36,7 @@ const Hero: React.FC = () => {
               onClick={scrollToContact}
               className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-bold py-5 px-10 rounded-2xl glow-primary flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 active:scale-95 animate-pulse-slow"
             >
-              Solicitar diagnóstico gratuito
+              {t('hero.cta')}
               <span className="material-symbols-outlined">arrow_forward</span>
             </button>
           </div>
