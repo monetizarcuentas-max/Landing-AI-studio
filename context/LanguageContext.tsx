@@ -78,6 +78,11 @@ const translations = {
     'pricing.feat.reminders': 'Recordatorios Automáticos',
     'pricing.feat.training': 'Capacitación al Cliente',
     'pricing.btn': 'Elegir Plan',
+    'pricing.implementation': 'Implementación (pago único)',
+    'pricing.opt.basic': 'Optimización mensual opcional (-20%)',
+    'pricing.opt.pro': 'Optimización mensual opcional (-30%)',
+    'pricing.opt.full': 'Optimización mensual opcional (-50%)',
+    'pricing.opt.note': 'La optimización mensual es opcional y está pensada para mejorar resultados y rendimiento.',
 
     'how.title': '¿Cómo funciona?',
     'how.subtitle': 'Un proceso simple y transparente para transformar tu captación de clientes.',
@@ -203,6 +208,11 @@ const translations = {
     'pricing.feat.reminders': 'Automatic Reminders',
     'pricing.feat.training': 'Client Training',
     'pricing.btn': 'Choose Plan',
+    'pricing.implementation': 'Implementation (one-time payment)',
+    'pricing.opt.basic': 'Optional monthly optimization (-20%)',
+    'pricing.opt.pro': 'Optional monthly optimization (-30%)',
+    'pricing.opt.full': 'Optional monthly optimization (-50%)',
+    'pricing.opt.note': 'Monthly optimization is optional and designed to improve results and performance.',
 
     'how.title': 'How does it work?',
     'how.subtitle': 'A simple and transparent process to transform your client acquisition.',

@@ -22,9 +22,9 @@ const Pricing: React.FC = () => {
                     <p className="text-xl font-bold text-white mb-2">{t('pricing.basic.title')}</p>
                     <p className="text-sm text-white/50 mb-6">{t('pricing.basic.desc')}</p>
                     <div className="flex flex-col mb-8">
-                        <span className="text-xs text-white/50 uppercase tracking-wider font-semibold mb-1">Implementación (pago único)</span>
+                        <span className="text-xs text-white/50 uppercase tracking-wider font-semibold mb-1">{t('pricing.implementation')}</span>
                         <span className="text-4xl font-extrabold text-white">USD 587</span>
-                        <span className="text-xs text-accent/70 mt-2 font-medium">Optimización mensual opcional (-20%)</span>
+                        <span className="text-xs text-accent/70 mt-2 font-medium">{t('pricing.opt.basic')}</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
                         <li className="flex items-center gap-3">
@@ -65,9 +65,9 @@ const Pricing: React.FC = () => {
                     <p className="text-xl font-bold text-white mb-2">{t('pricing.pro.title')}</p>
                     <p className="text-sm text-white/50 mb-6">{t('pricing.pro.desc')}</p>
                     <div className="flex flex-col mb-8">
-                        <span className="text-xs text-white/50 uppercase tracking-wider font-semibold mb-1">Implementación (pago único)</span>
+                        <span className="text-xs text-white/50 uppercase tracking-wider font-semibold mb-1">{t('pricing.implementation')}</span>
                         <span className="text-4xl font-extrabold text-white">USD 997</span>
-                        <span className="text-xs text-accent/70 mt-2 font-medium">Optimización mensual opcional (-30%)</span>
+                        <span className="text-xs text-accent/70 mt-2 font-medium">{t('pricing.opt.pro')}</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
                         <li className="flex items-center gap-3">
@@ -114,9 +114,9 @@ const Pricing: React.FC = () => {
                     <p className="text-xl font-bold text-white mb-2">{t('pricing.full.title')}</p>
                     <p className="text-sm text-white/50 mb-6">{t('pricing.full.desc')}</p>
                     <div className="flex flex-col mb-8">
-                        <span className="text-xs text-white/50 uppercase tracking-wider font-semibold mb-1">Implementación (pago único)</span>
+                        <span className="text-xs text-white/50 uppercase tracking-wider font-semibold mb-1">{t('pricing.implementation')}</span>
                         <span className="text-4xl font-extrabold text-white">USD 1497</span>
-                        <span className="text-xs text-accent/70 mt-2 font-medium">Optimización mensual opcional (-50%)</span>
+                        <span className="text-xs text-accent/70 mt-2 font-medium">{t('pricing.opt.full')}</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
                         <li className="flex items-center gap-3">
@@ -164,7 +164,7 @@ const Pricing: React.FC = () => {
 
         <div className="mt-12 text-center">
             <p className="text-white/40 text-sm max-w-2xl mx-auto">
-                La optimización mensual es opcional y está pensada para mejorar resultados y rendimiento.
+                {t('pricing.opt.note')}
             </p>
         </div>
       </div>
