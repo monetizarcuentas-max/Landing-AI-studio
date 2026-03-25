@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/guia",
+      "destination": "/planes_automatizacion.pdf",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

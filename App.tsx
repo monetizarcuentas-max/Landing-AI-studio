@@ -13,6 +13,16 @@ import NetworkBackground from './components/NetworkBackground';
 import TrustPolicy from './components/TrustPolicy';
 
 const App: React.FC = () => {
+  // Redirección simple para el PDF sin necesidad de instalar react-router
+  if (window.location.pathname === '/guia') {
+    window.location.href = '/planes_automatizacion.pdf';
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#000B18] text-white">
+        <p className="text-xl animate-pulse">Redirigiendo al documento...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col relative">
       <NetworkBackground />
