@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirigiendo a la Guía...</title>
+    <!-- Redirección automática de HTML -->
+    <meta http-equiv="refresh" content="0; url=/planes_automatizacion.pdf">
+    <!-- Redirección de JavaScript por si falla el meta refresh -->
+    <script>
+        window.location.replace("/planes_automatizacion.pdf");
+    </script>
+    <style>
+        body {
+            background-color: #000B18;
+            color: white;
+            font-family: system-ui, -apple-system, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        p {
+            font-size: 1.25rem;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+    </style>
+</head>
+<body>
+    <p>Redirigiendo al documento...</p>
+</body>
+</html>
