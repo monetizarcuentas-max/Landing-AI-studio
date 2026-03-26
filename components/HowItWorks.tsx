@@ -42,7 +42,7 @@ const HowItWorks: React.FC = () => {
             <div key={idx} className="relative">
               <div className="text-6xl font-black text-white/5 mb-4">{item.step}</div>
               <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-              <p className="text-white/50 leading-relaxed text-sm">{item.desc}</p>
+              <p className="text-white/50 leading-relaxed text-base">{item.desc}</p>
             </div>
           ))}
         </div>
