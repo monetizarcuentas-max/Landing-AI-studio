@@ -50,7 +50,7 @@ const WorkflowAnimation: React.FC = () => {
             <div className="w-1.5 h-1.5 rounded-full bg-yellow-500/80"></div>
             <div className="w-1.5 h-1.5 rounded-full bg-green-500/80"></div>
           </div>
-          <div className="text-[5px] md:text-[6px] text-center text-indigo-300 font-bold mb-2 tracking-wide shrink-0">{t('workflow.landing.system')}</div>
+          <div className="text-[6px] md:text-[8px] text-center text-indigo-300 font-bold mb-2 tracking-wide shrink-0">{t('workflow.landing.system')}</div>
           <div className="flex flex-col gap-2 h-full">
             <div className="w-full h-1/2 border border-indigo-500/30 rounded md:rounded-lg flex items-center justify-center bg-indigo-500/5">
               <span className="material-symbols-outlined text-indigo-400/50 text-lg md:text-xl">image</span>
@@ -59,7 +59,7 @@ const WorkflowAnimation: React.FC = () => {
               <div className="w-full h-1 md:h-1.5 bg-indigo-500/20 rounded-sm"></div>
               <div className="w-3/4 h-1 md:h-1.5 bg-indigo-500/20 rounded-sm"></div>
               <div className="w-full h-4 bg-green-500/90 rounded mt-auto flex items-center justify-center shadow-lg shadow-green-500/20">
-                <span className="text-[4px] md:text-[5px] text-white font-bold">{t('workflow.landing.contact')}</span>
+                <span className="text-[5px] md:text-[7px] text-white font-bold">{t('workflow.landing.contact')}</span>
               </div>
             </div>
           </div>
@@ -77,16 +77,16 @@ const WorkflowAnimation: React.FC = () => {
             <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-green-500 flex items-center justify-center shadow-md shadow-green-500/30 shrink-0">
               <span className="material-symbols-outlined text-white text-[8px] md:text-[10px]">smart_toy</span>
             </div>
-            <div className="text-[5px] md:text-[6px] text-white font-bold">{t('workflow.whatsapp.bot')}</div>
+            <div className="text-[6px] md:text-[8px] text-white font-bold">{t('workflow.whatsapp.bot')}</div>
           </div>
           <div className="flex flex-col gap-1.5 px-1">
-            <div className="self-start bg-gray-700 text-white text-[5px] md:text-[6px] p-1.5 rounded-r-lg rounded-bl-lg md:rounded-r-xl md:rounded-bl-xl max-w-[85%] leading-tight shadow-sm">
+            <div className="self-start bg-gray-700 text-white text-[6px] md:text-[8px] p-1.5 rounded-r-lg rounded-bl-lg md:rounded-r-xl md:rounded-bl-xl max-w-[85%] leading-tight shadow-sm">
               {t('workflow.whatsapp.msg1')}
             </div>
-            <div className="self-end bg-green-600 text-white text-[5px] md:text-[6px] p-1.5 rounded-l-lg rounded-br-lg md:rounded-l-xl md:rounded-br-xl max-w-[85%] leading-tight shadow-sm">
+            <div className="self-end bg-green-600 text-white text-[6px] md:text-[8px] p-1.5 rounded-l-lg rounded-br-lg md:rounded-l-xl md:rounded-br-xl max-w-[85%] leading-tight shadow-sm">
               {t('workflow.whatsapp.msg2')}
             </div>
-            <div className="self-start bg-gray-700 text-white text-[5px] md:text-[6px] p-1.5 rounded-r-lg rounded-bl-lg md:rounded-r-xl md:rounded-bl-xl max-w-[85%] leading-tight shadow-sm">
+            <div className="self-start bg-gray-700 text-white text-[6px] md:text-[8px] p-1.5 rounded-r-lg rounded-bl-lg md:rounded-r-xl md:rounded-bl-xl max-w-[85%] leading-tight shadow-sm">
               {t('workflow.whatsapp.msg3')}
             </div>
           </div>
@@ -102,11 +102,11 @@ const WorkflowAnimation: React.FC = () => {
         <div className="relative w-20 h-32 md:w-24 md:h-48 bg-dark/90 rounded-lg md:rounded-xl border border-accent/40 flex flex-col p-2 md:p-2.5 shadow-[0_0_15px_rgba(0,210,255,0.2)] overflow-hidden">
           <div className="flex items-center justify-center gap-1.5 mb-2 border-b border-accent/20 pb-1.5 w-full shrink-0">
             <span className="material-symbols-outlined text-accent text-[12px] md:text-sm">event</span>
-            <span className="text-[6px] md:text-[7px] text-white font-bold tracking-wider">{t('workflow.calendar.date')}</span>
+            <span className="text-[7px] md:text-[9px] text-white font-bold tracking-wider">{t('workflow.calendar.date')}</span>
           </div>
-          <div className="text-[5px] md:text-[6px] text-accent/90 font-bold text-center mb-1.5 tracking-wide">{t('workflow.calendar.title')}</div>
-          <div className="text-[5px] md:text-[6px] text-white font-medium text-center mb-2">{t('workflow.calendar.demo')}</div>
-          <div className="text-[5px] md:text-[6px] text-white/80 text-center bg-white/5 py-1.5 px-2 rounded border border-white/5 w-full mt-auto mb-1.5">11:00 AM</div>
+          <div className="text-[6px] md:text-[8px] text-accent/90 font-bold text-center mb-1.5 tracking-wide">{t('workflow.calendar.title')}</div>
+          <div className="text-[6px] md:text-[8px] text-white font-medium text-center mb-2">{t('workflow.calendar.demo')}</div>
+          <div className="text-[6px] md:text-[8px] text-white/80 text-center bg-white/5 py-1.5 px-2 rounded border border-white/5 w-full mt-auto mb-1.5">11:00 AM</div>
           <div className="absolute -bottom-2 -right-2 w-5 h-5 md:w-6 md:h-6 rounded-full bg-accent flex items-center justify-center border-2 border-dark shadow-[0_0_10px_rgba(0,210,255,0.5)]">
             <span className="material-symbols-outlined text-dark text-[10px] font-bold">check</span>
           </div>
@@ -148,7 +148,7 @@ const WorkflowAnimation: React.FC = () => {
         {steps.map((step, i) => (
           <React.Fragment key={step.id}>
             <motion.div
-              className="flex flex-col items-center z-10 w-full max-w-[160px] sm:max-w-[85px] md:max-w-[130px] lg:max-w-[150px]"
+              className="flex flex-col items-center z-10 w-full max-w-[180px] sm:max-w-[100px] md:max-w-[150px] lg:max-w-[180px]"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: i * 0.2, ease: "easeOut" }}
@@ -171,8 +171,8 @@ const WorkflowAnimation: React.FC = () => {
 
                 {/* Text Below */}
                 <div className="mt-3 sm:mt-2 md:mt-3 lg:mt-4 text-center w-full px-1 sm:px-0.5 md:px-1">
-                  <h3 className="text-[10px] sm:text-[7px] md:text-[8px] lg:text-[10px] font-extrabold text-white tracking-widest mb-1 sm:mb-0.5 md:mb-1 uppercase leading-tight">{step.title}</h3>
-                  <p className="text-[9px] sm:text-[6px] md:text-[7px] lg:text-[8px] text-white/70 font-medium leading-tight whitespace-pre-line uppercase">{step.subtitle}</p>
+                  <h3 className="text-sm sm:text-[10px] md:text-xs lg:text-sm font-extrabold text-white tracking-widest mb-1 sm:mb-0.5 md:mb-1 uppercase leading-tight">{step.title}</h3>
+                  <p className="text-xs sm:text-[8px] md:text-[10px] lg:text-xs text-white/70 font-medium leading-tight whitespace-pre-line uppercase">{step.subtitle}</p>
                 </div>
               </motion.div>
             </motion.div>

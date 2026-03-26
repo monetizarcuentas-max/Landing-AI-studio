@@ -36,8 +36,8 @@ const Solution: React.FC = () => {
                   <span className="material-symbols-outlined text-white text-3xl group-hover:text-accent transition-colors">{step.icon}</span>
                 </div>
                 <div className="text-center">
-                  <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-1">{step.label}</h3>
-                  <p className="text-xs text-white/50">{step.sublabel}</p>
+                  <h3 className="text-base md:text-lg font-bold text-white uppercase tracking-wider mb-1">{step.label}</h3>
+                  <p className="text-sm md:text-base text-white/50">{step.sublabel}</p>
                 </div>
               </div>
               {idx < arr.length - 1 && (
