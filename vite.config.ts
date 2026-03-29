@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => {
             theme_color: '#001B3A',
             icons: [
               {
-                src: '/favicon.png?v=2',
+                src: '/favicon.png?v=3',
                 sizes: '192x192',
                 type: 'image/png'
               }
