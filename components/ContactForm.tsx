@@ -8,7 +8,8 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Redirect to WhatsApp
-    window.open('https://wa.me/5493462607606?text=Hola,%20quiero%20agendar%20un%20diagnóstico%20gratuito.', '_blank');
+    const message = encodeURIComponent(t('contact.whatsapp.msg'));
+    window.open(`https://wa.me/5493462607606?text=${message}`, '_blank');
     setIsSubmitted(true);
   };
 
@@ -26,6 +27,7 @@ const ContactForm: React.FC = () => {
               <span className="text-white font-semibold">{t('contact.success.d2')}</span>
             </p>
             <div className="flex flex-col items-center gap-4 mt-2">
+              <p className="text-white font-medium mt-4">{t('contact.success.pdf')}</p>
               <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
                 <a 
                   href="https://drive.google.com/file/d/174NytdzPNOmGsS0Zt68OncGH-qB5gMi3/view?usp=sharing"
