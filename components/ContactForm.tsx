@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const ContactForm: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -25,12 +25,23 @@ const ContactForm: React.FC = () => {
               {t('contact.success.d1')} <br/>
               <span className="text-white font-semibold">{t('contact.success.d2')}</span>
             </p>
-            <button 
-              onClick={() => setIsSubmitted(false)}
-              className="mt-4 text-primary font-bold text-sm hover:underline"
-            >
-              {t('contact.success.btn')}
-            </button>
+            <div className="flex flex-col items-center gap-4 mt-2">
+              <a 
+                href={language === 'es' ? '/Sinergia_Digital_Info_ES.pdf' : '/Sinergia_Digital_Info_EN.pdf'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full text-sm font-bold transition-all flex items-center gap-2"
+              >
+                <span className="material-symbols-outlined text-lg">download</span>
+                {t('contact.success.pdf')}
+              </a>
+              <button 
+                onClick={() => setIsSubmitted(false)}
+                className="text-primary font-bold text-sm hover:underline"
+              >
+                {t('contact.success.btn')}
+              </button>
+            </div>
           </div>
         </div>
       </section>

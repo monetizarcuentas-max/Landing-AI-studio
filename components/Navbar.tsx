@@ -14,12 +14,12 @@ const Navbar: React.FC = () => {
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
       {/* Navbar Container */}
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
           <img src={headerIconBase64} alt="Icono" className="h-10 w-auto object-contain" />
           <span className="font-extrabold text-2xl tracking-tight text-gray-900">
             SINERGIA <span className="font-light text-accent">DIGITAL</span>
           </span>
-        </div>
+        </a>
         <div className="flex items-center gap-4">
           <button
             onClick={toggleLanguage}
