@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
             </p>
             <div className="flex flex-col items-center gap-4 mt-2">
               <a 
-                href={language === 'es' ? '/Sinergia_Digital_Info_ES.pdf' : '/Sinergia_Digital_Info_EN.pdf'}
+                href={language === 'es' ? 'https://drive.google.com/file/d/174NytdzPNOmGsS0Zt68OncGH-qB5gMi3/view?usp=sharing' : 'https://drive.google.com/file/d/1AVVl3rM_GTA-4d9Uer7Za9UUj7D2tPEJ/view?usp=drive_link'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full text-sm font-bold transition-all flex items-center gap-2"
