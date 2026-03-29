@@ -8,7 +8,7 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Redirect to WhatsApp
-    window.open('https://wa.me/5493462538111?text=Hola,%20quiero%20agendar%20un%20diagnóstico%20gratuito.', '_blank');
+    window.open('https://wa.me/5493462607606?text=Hola,%20quiero%20agendar%20un%20diagnóstico%20gratuito.', '_blank');
     setIsSubmitted(true);
   };
 
