@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import TopBanner from './components/TopBanner';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Problem from './components/Problem';
@@ -15,6 +16,7 @@ import TrustPolicy from './components/TrustPolicy';
 const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col relative">
+      <TopBanner />
       <NetworkBackground />
       <Navbar />
       <main className="flex-grow relative z-10">

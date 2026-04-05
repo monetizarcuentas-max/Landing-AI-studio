@@ -11,6 +11,7 @@ interface LanguageContextType {
 const translations = {
   es: {
     'nav.book': 'Agendar Consulta',
+    'banner.urgency': 'Capacidad limitada: 5 proyectos mensuales. Abril completo. Reserva hoy tu auditoría de diagnóstico para asegurar tu cupo de Mayo.',
     'hero.badge': 'Automatización B2B',
     'hero.title1': 'Convierte más consultas en clientes ',
     'hero.title2': 'automáticamente',
@@ -143,6 +144,7 @@ const translations = {
   },
   en: {
     'nav.book': 'Book Consultation',
+    'banner.urgency': 'Limited capacity: 5 projects per month. April is full. Book your diagnostic audit today to secure your spot for May.',
     'hero.badge': 'B2B Automation',
     'hero.title1': 'Convert more inquiries into clients ',
     'hero.title2': 'automatically',
