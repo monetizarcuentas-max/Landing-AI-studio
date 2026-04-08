@@ -15,10 +15,18 @@ const ContactForm: React.FC = () => {
 
   const handleLinkedInClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.location.href = "linkedin://in/sinergiadigitalautomatizaciones";
-    setTimeout(() => {
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+
+    if (/android/i.test(userAgent)) {
+      // Force Android App via Intent
+      window.location.href = "intent://in/sinergiadigitalautomatizaciones#Intent;package=com.linkedin.android;scheme=linkedin;end;";
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
+      // Force iOS App
+      window.location.href = "linkedin://in/sinergiadigitalautomatizaciones";
+    } else {
+      // Desktop fallback
       window.open("https://www.linkedin.com/in/sinergiadigitalautomatizaciones/", "_blank");
-    }, 1200);
+    }
   };
 
   if (isSubmitted) {
