@@ -13,6 +13,14 @@ const ContactForm: React.FC = () => {
     setIsSubmitted(true);
   };
 
+  const handleLinkedInClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.location.href = "linkedin://in/sinergiadigitalautomatizaciones";
+    setTimeout(() => {
+      window.open("https://www.linkedin.com/in/sinergiadigitalautomatizaciones/", "_blank");
+    }, 1200);
+  };
+
   if (isSubmitted) {
     return (
       <section id="contact" className="py-28 px-6 bg-transparent">
@@ -106,8 +114,7 @@ const ContactForm: React.FC = () => {
           <div className="mt-8 pt-6 border-t border-white/10 flex justify-center">
             <a
               href="https://www.linkedin.com/in/sinergiadigitalautomatizaciones/"
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={handleLinkedInClick}
               className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm font-medium"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">

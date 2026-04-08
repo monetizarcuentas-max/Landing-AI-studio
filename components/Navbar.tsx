@@ -10,6 +10,14 @@ const Navbar: React.FC = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleLinkedInClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.location.href = "linkedin://in/sinergiadigitalautomatizaciones";
+    setTimeout(() => {
+      window.open("https://www.linkedin.com/in/sinergiadigitalautomatizaciones/", "_blank");
+    }, 1200);
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
       {/* Navbar Container */}
@@ -23,8 +31,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center gap-4">
           <a
             href="https://www.linkedin.com/in/sinergiadigitalautomatizaciones/"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={handleLinkedInClick}
             className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-[#0A66C2] transition-colors"
             title="LinkedIn"
           >
