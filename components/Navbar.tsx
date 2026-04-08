@@ -12,19 +12,43 @@ const Navbar: React.FC = () => {
 
   const handleLinkedInClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    const appUrl = "linkedin://in/sinergiadigitalautomatizaciones";
+    
+    // Detect OS to use the most reliable deep link scheme
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    let appUrl = "linkedin://in/sinergiadigitalautomatizaciones";
+    
+    if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
+      // iOS usually responds better to profile/ instead of in/
+      appUrl = "linkedin://profile/sinergiadigitalautomatizaciones";
+    }
+    
     const webUrl = "https://www.linkedin.com/in/sinergiadigitalautomatizaciones/";
-
     const start = Date.now();
+    let timeoutId: NodeJS.Timeout;
+
+    // 1. Cancel the web redirect if the browser goes to the background (app opened successfully)
+    const handleVisibilityChange = () => {
+      if (document.hidden || document.visibilityState === 'hidden') {
+        clearTimeout(timeoutId);
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // 2. Try to open the app
     window.location.href = appUrl;
 
-    setTimeout(() => {
-      // If the browser was suspended by the app opening, this timeout will be delayed.
-      // If it fires right on time, the app likely didn't open, so we fallback to web.
-      if (Date.now() - start < 1500) {
+    // 3. Fallback to web if the app doesn't open
+    // Increased to 2500ms because iOS/Android often show a confirmation dialog ("Open in LinkedIn?")
+    // 1200ms is too fast and triggers the web redirect before the user can tap "Open".
+    timeoutId = setTimeout(() => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      // Check if the device was suspended. If Date.now() - start is much larger than 2500,
+      // it means the app DID open, but the user later returned to the browser.
+      if (Date.now() - start < 3500) {
         window.location.href = webUrl;
       }
-    }, 1200);
+    }, 2500);
   };
 
   return (
