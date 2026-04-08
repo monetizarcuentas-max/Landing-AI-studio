@@ -12,18 +12,19 @@ const Navbar: React.FC = () => {
 
   const handleLinkedInClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    const appUrl = "linkedin://in/sinergiadigitalautomatizaciones";
+    const webUrl = "https://www.linkedin.com/in/sinergiadigitalautomatizaciones/";
 
-    if (/android/i.test(userAgent)) {
-      // Force Android App via Intent
-      window.location.href = "intent://in/sinergiadigitalautomatizaciones#Intent;package=com.linkedin.android;scheme=linkedin;end;";
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
-      // Force iOS App
-      window.location.href = "linkedin://in/sinergiadigitalautomatizaciones";
-    } else {
-      // Desktop fallback
-      window.open("https://www.linkedin.com/in/sinergiadigitalautomatizaciones/", "_blank");
-    }
+    const start = Date.now();
+    window.location.href = appUrl;
+
+    setTimeout(() => {
+      // If the browser was suspended by the app opening, this timeout will be delayed.
+      // If it fires right on time, the app likely didn't open, so we fallback to web.
+      if (Date.now() - start < 1500) {
+        window.location.href = webUrl;
+      }
+    }, 1200);
   };
 
   return (
