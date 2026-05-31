@@ -66,7 +66,6 @@ const ContactForm: React.FC = () => {
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-white mb-4">{t('contact.title')}</h2>
-          <p className="text-white/50">{t('contact.subtitle')}</p>
         </div>
 
         <div className="glass-card p-10 rounded-4xl border-white/10 shadow-3xl">

@@ -1,198 +1,231 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { useLanguage } from '../context/LanguageContext';
 
 const WorkflowAnimation: React.FC = () => {
-  const { t } = useLanguage();
+  const [mounted, setMounted] = useState(false);
 
-  const steps = [
-    {
-      id: 'meta',
-      title: t('workflow.meta.title'),
-      subtitle: t('workflow.meta.sub'),
-      icon: (
-        <div className="relative w-20 h-32 md:w-24 md:h-48 bg-dark/90 rounded-lg border border-gray-700 flex flex-col p-2 shadow-lg overflow-hidden">
-          {/* Header */}
-          <div className="flex items-center gap-1.5 mb-2">
-            <div className="w-4 h-4 md:w-5 md:h-5 bg-blue-500/20 rounded border border-blue-500/30 shrink-0"></div>
-            <div className="flex flex-col gap-0.5 w-full">
-              <div className="w-8 md:w-12 h-1 bg-gray-600 rounded-full"></div>
-              <div className="w-6 md:w-8 h-1 bg-gray-700 rounded-full"></div>
-            </div>
-          </div>
-          {/* Image */}
-          <div className="w-full flex-1 bg-blue-500/20 border border-blue-500/30 rounded flex items-center justify-center mb-2">
-            <span className="material-symbols-outlined text-blue-400 text-xl md:text-2xl">campaign</span>
-          </div>
-          {/* Footer */}
-          <div className="flex flex-col gap-1.5">
-            <div className="w-3/4 h-1 bg-gray-600 rounded-full"></div>
-            <div className="flex justify-between items-end">
-               <div className="flex flex-col gap-0.5 w-1/2">
-                 <div className="w-full h-1 bg-gray-700 rounded-full"></div>
-                 <div className="w-2/3 h-1 bg-gray-700 rounded-full"></div>
-               </div>
-               <div className="w-6 md:w-8 h-1.5 md:h-2 bg-gray-600 rounded-full"></div>
-            </div>
-          </div>
-        </div>
-      ),
-      color: 'rgba(59,130,246,0.15)'
-    },
-    {
-      id: 'landing',
-      title: t('workflow.landing.title'),
-      subtitle: t('workflow.landing.sub'),
-      icon: (
-        <div className="relative w-20 h-32 md:w-24 md:h-48 bg-dark/90 rounded-lg md:rounded-xl border border-indigo-500/40 flex flex-col p-2 shadow-[0_0_15px_rgba(99,102,241,0.2)] overflow-hidden">
-          <div className="flex gap-1.5 mb-2 border-b border-indigo-500/30 pb-1.5 shrink-0">
-            <div className="w-1.5 h-1.5 rounded-full bg-red-500/80"></div>
-            <div className="w-1.5 h-1.5 rounded-full bg-yellow-500/80"></div>
-            <div className="w-1.5 h-1.5 rounded-full bg-green-500/80"></div>
-          </div>
-          <div className="text-[6px] md:text-[8px] text-center text-indigo-300 font-bold mb-2 tracking-wide shrink-0">{t('workflow.landing.system')}</div>
-          <div className="flex flex-col gap-2 h-full">
-            <div className="w-full h-1/2 border border-indigo-500/30 rounded md:rounded-lg flex items-center justify-center bg-indigo-500/5">
-              <span className="material-symbols-outlined text-indigo-400/50 text-lg md:text-xl">image</span>
-            </div>
-            <div className="w-full h-1/2 flex flex-col gap-1.5">
-              <div className="w-full h-1 md:h-1.5 bg-indigo-500/20 rounded-sm"></div>
-              <div className="w-3/4 h-1 md:h-1.5 bg-indigo-500/20 rounded-sm"></div>
-              <div className="w-full h-4 bg-green-500/90 rounded mt-auto flex items-center justify-center shadow-lg shadow-green-500/20">
-                <span className="text-[5px] md:text-[7px] text-white font-bold">{t('workflow.landing.contact')}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      ),
-      color: 'rgba(99,102,241,0.15)'
-    },
-    {
-      id: 'whatsapp',
-      title: t('workflow.whatsapp.title'),
-      subtitle: t('workflow.whatsapp.sub'),
-      icon: (
-        <div className="relative w-20 h-32 md:w-24 md:h-48 bg-dark/90 rounded-xl md:rounded-[2rem] border-2 md:border-4 border-gray-800 flex flex-col p-1.5 md:p-2 shadow-[0_0_15px_rgba(34,197,94,0.2)] overflow-hidden">
-          <div className="flex items-center gap-1.5 border-b border-gray-700 pb-1.5 mb-1.5 mt-1 px-1 shrink-0">
-            <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-green-500 flex items-center justify-center shadow-md shadow-green-500/30 shrink-0">
-              <span className="material-symbols-outlined text-white text-[8px] md:text-[10px]">smart_toy</span>
-            </div>
-            <div className="text-[6px] md:text-[8px] text-white font-bold">{t('workflow.whatsapp.bot')}</div>
-          </div>
-          <div className="flex flex-col gap-1.5 px-1">
-            <div className="self-start bg-gray-700 text-white text-[6px] md:text-[8px] p-1.5 rounded-r-lg rounded-bl-lg md:rounded-r-xl md:rounded-bl-xl max-w-[85%] leading-tight shadow-sm">
-              {t('workflow.whatsapp.msg1')}
-            </div>
-            <div className="self-end bg-green-600 text-white text-[6px] md:text-[8px] p-1.5 rounded-l-lg rounded-br-lg md:rounded-l-xl md:rounded-br-xl max-w-[85%] leading-tight shadow-sm">
-              {t('workflow.whatsapp.msg2')}
-            </div>
-            <div className="self-start bg-gray-700 text-white text-[6px] md:text-[8px] p-1.5 rounded-r-lg rounded-bl-lg md:rounded-r-xl md:rounded-bl-xl max-w-[85%] leading-tight shadow-sm">
-              {t('workflow.whatsapp.msg3')}
-            </div>
-          </div>
-        </div>
-      ),
-      color: 'rgba(34,197,94,0.15)'
-    },
-    {
-      id: 'calendar',
-      title: t('workflow.calendar.title'),
-      subtitle: t('workflow.calendar.sub'),
-      icon: (
-        <div className="relative w-20 h-32 md:w-24 md:h-48 bg-dark/90 rounded-lg md:rounded-xl border border-accent/40 flex flex-col p-2 md:p-2.5 shadow-[0_0_15px_rgba(0,210,255,0.2)] overflow-hidden">
-          <div className="flex items-center justify-center gap-1.5 mb-2 border-b border-accent/20 pb-1.5 w-full shrink-0">
-            <span className="material-symbols-outlined text-accent text-[12px] md:text-sm">event</span>
-            <span className="text-[7px] md:text-[9px] text-white font-bold tracking-wider">{t('workflow.calendar.date')}</span>
-          </div>
-          <div className="text-[6px] md:text-[8px] text-accent/90 font-bold text-center mb-1.5 tracking-wide">{t('workflow.calendar.title')}</div>
-          <div className="text-[6px] md:text-[8px] text-white font-medium text-center mb-2">{t('workflow.calendar.demo')}</div>
-          <div className="text-[6px] md:text-[8px] text-white/80 text-center bg-white/5 py-1.5 px-2 rounded border border-white/5 w-full mt-auto mb-1.5">11:00 AM</div>
-          <div className="absolute -bottom-2 -right-2 w-5 h-5 md:w-6 md:h-6 rounded-full bg-accent flex items-center justify-center border-2 border-dark shadow-[0_0_10px_rgba(0,210,255,0.5)]">
-            <span className="material-symbols-outlined text-dark text-[10px] font-bold">check</span>
-          </div>
-        </div>
-      ),
-      color: 'rgba(0,210,255,0.15)'
-    }
-  ];
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto flex items-center justify-center py-4 md:py-10 px-0">
+    <div className="relative w-full max-w-3xl h-[500px] lg:h-[650px] mx-auto flex items-center justify-center pointer-events-none perspective-[1500px] overflow-visible">
       
-      {/* Background Network */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none overflow-hidden">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[800px] min-h-[800px]">
-          <defs>
-            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#00D2FF" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#00D2FF" stopOpacity="0" />
-            </radialGradient>
-          </defs>
-          <line x1="20%" y1="30%" x2="40%" y2="60%" stroke="#00D2FF" strokeWidth="1" opacity="0.4" />
-          <line x1="40%" y1="60%" x2="60%" y2="40%" stroke="#00D2FF" strokeWidth="1" opacity="0.4" />
-          <line x1="60%" y1="40%" x2="80%" y2="70%" stroke="#00D2FF" strokeWidth="1" opacity="0.4" />
-          <line x1="30%" y1="80%" x2="50%" y2="20%" stroke="#00D2FF" strokeWidth="1" opacity="0.2" />
-          <circle cx="20%" cy="30%" r="4" fill="url(#glow)" />
-          <circle cx="40%" cy="60%" r="6" fill="url(#glow)" />
-          <circle cx="60%" cy="40%" r="5" fill="url(#glow)" />
-          <circle cx="80%" cy="70%" r="4" fill="url(#glow)" />
-          <circle cx="30%" cy="80%" r="3" fill="url(#glow)" />
-          <circle cx="50%" cy="20%" r="5" fill="url(#glow)" />
-        </svg>
-      </div>
-
-      <div 
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-1 lg:gap-2 w-full scale-100 lg:scale-95 xl:scale-100 origin-center"
-        style={{ transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)' }}
+      {/* 3D Background Space (Depth and Nodes) */}
+      <motion.div 
+        className="absolute inset-0 z-0"
+        animate={{ rotateX: [10, -5, 10], rotateY: [-10, 10, -10] }}
+        transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
+        style={{ transformStyle: 'preserve-3d' }}
       >
-        {steps.map((step, i) => (
-          <React.Fragment key={step.id}>
-            <motion.div
-              className="flex flex-col items-center z-10 w-full max-w-[180px] sm:max-w-[100px] md:max-w-[150px] lg:max-w-[180px]"
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.2, ease: "easeOut" }}
-            >
-              <motion.div
-                animate={{ y: [-2, 2, -2] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: i * 0.1 }}
-                className="w-full flex flex-col items-center"
-              >
-                {/* Glass Panel */}
-                <div 
-                  className="relative p-4 sm:p-2 md:p-4 lg:p-5 rounded-2xl sm:rounded-xl md:rounded-3xl backdrop-blur-xl border border-white/10 flex flex-col items-center justify-center w-full"
-                  style={{ 
-                    background: `linear-gradient(145deg, rgba(255,255,255,0.05) 0%, ${step.color} 100%)`,
-                    boxShadow: `0 10px 40px -10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1)`
+        <div className="absolute inset-0 bg-[#020817] shadow-[inset_0_0_150px_rgba(0,0,0,1)] rounded-3xl opacity-80" style={{ transform: 'translateZ(-200px)' }} />
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-[-50%] opacity-20" style={{ backgroundImage: 'radial-gradient(circle at center, #00d2ff 1px, transparent 1px)', backgroundSize: '40px 40px', transform: 'translateZ(-100px) rotateX(45deg)' }} />
+      </motion.div>
+
+      {/* Main Container with subtle floating */}
+      <motion.div 
+        className="relative w-full h-full flex items-center justify-between z-10"
+        style={{ transformStyle: 'preserve-3d' }}
+        animate={{ y: [-10, 10, -10], rotateY: [-2, 2, -2] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        
+        {/* LEFT COMPONENT: Traffic Injection (Meta Ads) */}
+        <div className="absolute left-[0%] top-1/2 -translate-y-1/2 w-48 h-full flex items-center justify-center z-20" style={{ transform: 'translateZ(50px)' }}>
+          {/* Incoming Flow Particles & Arrows */}
+          <div className="absolute inset-0">
+             {[...Array(15)].map((_, i) => (
+                <motion.div
+                  key={`traffic-particle-${i}`}
+                  className="absolute w-6 h-[2px] bg-gradient-to-r from-orange-500 to-cyan-400 rounded-full blur-[1px]"
+                  style={{ top: `${20 + Math.random() * 60}%`, left: '-50%' }}
+                  animate={{ 
+                    left: '120%', 
+                    opacity: [0, 1, 1, 0],
+                    scale: [0.5, 1.5, 1, 0.5]
                   }}
-                >
-                  {step.icon}
-                </div>
+                  transition={{ 
+                    duration: 1 + Math.random() * 1.5, 
+                    repeat: Infinity, 
+                    delay: Math.random() * 2,
+                    ease: "anticipate"
+                  }}
+                />
+             ))}
+             {/* Floating IG icons / Ads icons */}
+             {[...Array(5)].map((_, i) => (
+                 <motion.div 
+                   key={`social-icon-${i}`}
+                   className="absolute left-[-20%] flex items-center justify-center w-8 h-8 rounded-xl bg-orange-600/20 border border-orange-500/40 backdrop-blur-md shadow-[0_0_15px_rgba(249,115,22,0.3)] text-orange-400"
+                   style={{ top: `${25 + Math.random() * 50}%` }}
+                   initial={{ opacity: 0, x: -30, rotate: -20, scale: 0.5 }}
+                   animate={{ opacity: [0, 1, 1, 0], x: 200, rotate: 20, scale: [0.5, 1, 0.8, 0] }}
+                   transition={{ duration: 2.5 + Math.random(), repeat: Infinity, delay: i * 0.5, ease: "linear" }}
+                 >
+                   <span className="material-symbols-outlined text-sm">photo_camera</span>
+                 </motion.div>
+             ))}
+          </div>
+        </div>
 
-                {/* Text Below */}
-                <div className="mt-3 sm:mt-2 md:mt-3 lg:mt-4 text-center w-full px-1 sm:px-0.5 md:px-1">
-                  <h3 className="text-sm sm:text-[10px] md:text-xs lg:text-sm font-extrabold text-white tracking-widest mb-1 sm:mb-0.5 md:mb-1 uppercase leading-tight">{step.title}</h3>
-                  <p className="text-xs sm:text-[8px] md:text-[10px] lg:text-xs text-white/70 font-medium leading-tight whitespace-pre-line uppercase">{step.subtitle}</p>
-                </div>
+        {/* CENTER COMPONENT: The "Growth Core" (Transparent Digital Glass & AI) */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 z-30" style={{ transform: 'translateZ(100px)' }}>
+           {/* Outer Core Ring */}
+           <motion.div 
+             className="absolute inset-[-20px] rounded-full border-4 border-[#00d2ff]/10 border-t-[#00d2ff]/60 border-b-cyan-400/60"
+             animate={{ rotate: 360, rotateX: 20, rotateY: 10 }}
+             transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+             style={{ transformStyle: 'preserve-3d' }}
+           />
+           <motion.div 
+             className="absolute inset-[-40px] rounded-full border border-green-500/20 border-r-green-400/60 border-l-transparent"
+             animate={{ rotate: -360, rotateX: -20, rotateY: -10 }}
+             transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
+             style={{ transformStyle: 'preserve-3d' }}
+           />
+           
+           {/* Inner Glass Sphere */}
+           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-900/40 to-emerald-900/40 backdrop-blur-xl border border-white/20 shadow-[0_0_80px_rgba(0,210,255,0.2),inset_0_0_40px_rgba(0,210,255,0.4)] overflow-hidden flex items-center justify-center">
+              {/* Internal Neural Web */}
+              <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full opacity-60">
+                 <motion.path 
+                   d="M20,50 Q40,20 50,50 T80,50" 
+                   fill="transparent" 
+                   stroke="url(#core-grad)" 
+                   strokeWidth="1.5" 
+                   strokeDasharray="4 4"
+                   animate={{ strokeDashoffset: [0, -20] }}
+                   transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                 />
+                 <motion.path 
+                   d="M20,50 Q40,80 50,50 T80,50" 
+                   fill="transparent" 
+                   stroke="url(#core-grad)" 
+                   strokeWidth="1.5" 
+                   strokeDasharray="4 4"
+                   animate={{ strokeDashoffset: [0, 20] }}
+                   transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                 />
+                 <defs>
+                   <linearGradient id="core-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                     <stop offset="0%" stopColor="#00d2ff" />
+                     <stop offset="100%" stopColor="#10b981" />
+                   </linearGradient>
+                 </defs>
+              </svg>
+              
+              {/* AI Processing Core */}
+              <div className="relative z-10 w-24 h-24 rounded-full bg-[#00d2ff]/10 flex items-center justify-center animate-pulse-slow">
+                 <motion.div 
+                   className="absolute inset-0 rounded-full bg-green-500/20 blur-md"
+                   animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+                   transition={{ duration: 2, repeat: Infinity }}
+                 />
+                 <span className="material-symbols-outlined text-5xl text-white drop-shadow-[0_0_15px_#10b981]">dynamic_form</span>
+              </div>
+              
+              {/* Flash abstract chats */}
+              <motion.div className="absolute top-[20%] left-[60%] bg-white/10 backdrop-blur-md rounded-xl p-1 shadow-[0_0_10px_#10b981]" animate={{ opacity: [0, 1, 0], scale: [0.5, 1, 0.5] }} transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}>
+                 <div className="w-8 h-1 bg-green-400 rounded-full mb-1"></div>
+                 <div className="w-4 h-1 bg-green-400/50 rounded-full"></div>
               </motion.div>
-            </motion.div>
+              <motion.div className="absolute top-[60%] left-[20%] bg-white/10 backdrop-blur-md rounded-xl p-1 shadow-[0_0_10px_#00d2ff]" animate={{ opacity: [0, 1, 0], scale: [0.5, 1, 0.5] }} transition={{ duration: 1.5, repeat: Infinity, delay: 0.9 }}>
+                 <div className="w-10 h-1 bg-cyan-400 rounded-full mb-1"></div>
+                 <div className="w-6 h-1 bg-cyan-400/50 rounded-full"></div>
+              </motion.div>
+           </div>
+           
+           <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-mono tracking-[0.2em] text-white/50 bg-black/40 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md">
+             AI CORE ENGINE
+           </div>
+        </div>
 
-            {/* Arrow connecting steps */}
-            {i < steps.length - 1 && (
-              <motion.div
-                className="flex items-center justify-center text-accent/60 z-0 shrink-0 my-1 sm:my-0"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: (i * 0.2) + 0.2 }}
-              >
-                <span className="material-symbols-outlined text-2xl sm:text-sm md:text-lg lg:text-xl rotate-90 sm:rotate-0">arrow_forward</span>
-              </motion.div>
-            )}
-          </React.Fragment>
-        ))}
-      </div>
+        {/* RIGHT COMPONENT: Stabilized Output & Dashboard Panel */}
+        <div className="absolute right-[0%] top-1/2 -translate-y-1/2 w-72 h-full flex items-center justify-center z-40" style={{ transform: 'translateZ(150px)' }}>
+          {/* Connecting Flow from Core */}
+          <div className="absolute left-[-150px] w-[150px] top-1/2 -translate-y-1/2 flex items-center h-20">
+             {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={`out-particle-${i}`}
+                  className="absolute w-12 h-[2px] bg-green-400 rounded-full shadow-[0_0_10px_#10b981]"
+                  style={{ top: `${40 + Math.random() * 20}%`, left: '0%' }}
+                  animate={{ left: '100%', opacity: [0, 1, 1, 0] }}
+                  transition={{ duration: 1, repeat: Infinity, delay: i * 0.2, ease: "linear" }}
+                />
+             ))}
+          </div>
+
+          <motion.div 
+             className="relative w-full p-5 rounded-2xl border border-green-500/30 bg-[#0B1527]/80 backdrop-blur-2xl shadow-[0_0_60px_rgba(16,185,129,0.15)] flex flex-col gap-4 overflow-hidden"
+             style={{ transformStyle: 'preserve-3d' }}
+             animate={{ rotateY: [-5, 5, -5], rotateX: [2, -2, 2] }}
+             transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+          >
+             {/* Diagonal glass reflection */}
+             <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-gradient-to-tr from-transparent via-white/5 to-transparent rotate-45 pointer-events-none" />
+             
+             {/* Header */}
+             <div className="flex justify-between items-center border-b border-green-500/20 pb-2">
+                 <div className="flex items-center gap-2">
+                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_#10b981]" />
+                   <span className="text-[10px] font-mono font-bold text-green-400 uppercase tracking-widest">Live ROI</span>
+                 </div>
+                 <span className="material-symbols-outlined text-sm text-green-500">query_stats</span>
+             </div>
+
+             {/* Live Revenue Metric */}
+             <div>
+                <p className="text-[10px] text-white/50 uppercase tracking-wider mb-1">Facturación Generada</p>
+                <div className="flex items-end gap-1 font-mono">
+                  <span className="text-3xl font-black text-white glow-text-green tracking-tighter">
+                    <span className="text-green-500 mr-1">$</span>
+                    <AnimatedRevenue />
+                  </span>
+                </div>
+             </div>
+
+             {/* Bar Chart Visualization */}
+             <div className="space-y-2 mt-2">
+                <div className="text-[9px] text-white/50 uppercase tracking-wider flex justify-between">
+                   <span>Conversiones Recientes</span>
+                   <span className="text-green-400">↑ 48%</span>
+                </div>
+                <div className="flex items-end gap-2 h-16 pt-2 border-b border-white/10 pb-1">
+                   {[40, 65, 45, 80, 55, 95].map((height, i) => (
+                      <div key={`bar-${i}`} className="flex-1 bg-green-500/10 rounded-t-sm relative group overflow-hidden" style={{ height: '100%' }}>
+                        <motion.div 
+                          className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-green-600 to-green-400 rounded-t-sm"
+                          initial={{ height: '0%' }}
+                          animate={{ height: ['0%', `${height}%`, `${height}%`, '10%'] }}
+                          transition={{ duration: 4, repeat: Infinity, delay: i * 0.2, ease: "easeInOut" }}
+                        />
+                      </div>
+                   ))}
+                </div>
+             </div>
+          </motion.div>
+        </div>
+      </motion.div>
     </div>
   );
 };
 
+const AnimatedRevenue = () => {
+  const [val, setVal] = useState(14500);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+       // Simulate dynamic revenue increases
+       setVal(v => Math.min(v + Math.floor(Math.random() * 250), 99999));
+    }, 1500);
+    return () => clearInterval(timer);
+  }, []);
+
+  return <>{val.toLocaleString('en-US')}</>;
+};
+
 export default WorkflowAnimation;
+

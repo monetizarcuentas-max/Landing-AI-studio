@@ -23,10 +23,10 @@ const App: React.FC = () => {
         <Hero />
         <Problem />
         <Solution />
-        <Pricing />
         <HowItWorks />
         <TargetAudience />
         <TrustPolicy />
+        <Pricing />
         <ContactForm />
       </main>
       <Footer />

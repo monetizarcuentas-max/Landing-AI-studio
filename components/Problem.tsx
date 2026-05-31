@@ -19,22 +19,22 @@ const Problem: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
-              icon: 'schedule',
+              icon: 'visibility_off',
               title: t('problem.1.title'),
               desc: t('problem.1.desc')
             },
             {
-              icon: 'person_off',
+              icon: 'sms_failed',
               title: t('problem.2.title'),
               desc: t('problem.2.desc')
             },
             {
-              icon: 'trending_down',
+              icon: 'web_asset_off',
               title: t('problem.3.title'),
               desc: t('problem.3.desc')
             },
             {
-              icon: 'event_busy',
+              icon: 'money_off',
               title: t('problem.4.title'),
               desc: t('problem.4.desc')
             }

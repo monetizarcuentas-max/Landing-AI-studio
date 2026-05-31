@@ -23,29 +23,29 @@ const Pricing: React.FC = () => {
                     <p className="text-sm text-white/50 mb-6">{t('pricing.basic.desc')}</p>
                     <div className="flex flex-col mb-8">
                         <span className="text-xs text-white/50 uppercase tracking-wider font-semibold mb-1">{t('pricing.implementation')}</span>
-                        <span className="text-4xl font-extrabold text-white">USD 587</span>
+                        <span className="text-4xl font-extrabold text-white">USD 457</span>
                         <span className="text-xs text-accent/70 mt-2 font-medium">{t('pricing.opt.basic')}</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.bot')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.basic.1')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.auto')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.basic.2')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.qualify')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.basic.3')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.ads')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.basic.4')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.support')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.basic.5')}</span>
                         </li>
                     </ul>
                     <button 
@@ -66,37 +66,41 @@ const Pricing: React.FC = () => {
                     <p className="text-sm text-white/50 mb-6">{t('pricing.pro.desc')}</p>
                     <div className="flex flex-col mb-8">
                         <span className="text-xs text-white/50 uppercase tracking-wider font-semibold mb-1">{t('pricing.implementation')}</span>
-                        <span className="text-4xl font-extrabold text-white">USD 997</span>
+                        <span className="text-4xl font-extrabold text-white">USD 867</span>
                         <span className="text-xs text-accent/70 mt-2 font-medium">{t('pricing.opt.pro')}</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">{t('pricing.feat.ai')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/90 font-medium">{t('pricing.pro.1')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">{t('pricing.feat.qualify')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/90 font-medium">{t('pricing.pro.2')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">{t('pricing.feat.landing')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/90 font-medium">{t('pricing.pro.3')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">{t('pricing.feat.ads')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/90 font-medium">{t('pricing.pro.4')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">{t('pricing.feat.calendar')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/90 font-medium">{t('pricing.pro.5')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">{t('pricing.feat.reminders')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/90 font-medium">{t('pricing.pro.6')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/90 font-medium">{t('pricing.feat.support')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/90 font-medium">{t('pricing.pro.7')}</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-accent text-sm mt-0.5">verified</span>
+                            <span className="text-sm text-white/90 font-medium">{t('pricing.pro.8')}</span>
                         </li>
                     </ul>
                     <button 
@@ -119,37 +123,41 @@ const Pricing: React.FC = () => {
                         <span className="text-xs text-accent/70 mt-2 font-medium">{t('pricing.opt.full')}</span>
                     </div>
                     <ul className="space-y-4 flex-1 mb-10">
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.ai')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.full.1')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.qualify')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.full.2')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.landing')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.full.3')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.ads')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.full.4')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.calendar')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.full.5')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.reminders')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.full.6')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.training')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.full.7')}</span>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
-                            <span className="text-sm text-white/70">{t('pricing.feat.support')}</span>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.full.8')}</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-accent text-sm mt-0.5">verified</span>
+                            <span className="text-sm text-white/70">{t('pricing.full.9')}</span>
                         </li>
                     </ul>
                     <button 

@@ -34,6 +34,9 @@
     .gradient-text-primary {
         @apply bg-clip-text text-transparent bg-gradient-to-br from-accent to-primary;
     }
+    .glow-text-green {
+        text-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+    }
     .hide-scrollbar::-webkit-scrollbar {
         display: none;
     }
