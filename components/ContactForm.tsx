@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
               <p className="text-white font-medium mt-4">{t('contact.success.pdf')}</p>
               <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
                 <a 
-                  href="https://drive.google.com/file/d/174NytdzPNOmGsS0Zt68OncGH-qB5gMi3/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1yyF7dL6sE83m9eUgRM8HStSaBkwYDOyq/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full text-sm font-bold transition-all flex items-center justify-center gap-2"
@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
                   PDF (Español)
                 </a>
                 <a 
-                  href="https://drive.google.com/file/d/1AVVl3rM_GTA-4d9Uer7Za9UUj7D2tPEJ/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1vd0LR2BshE4DXE_bVjhutIIukSsVfPeH/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full text-sm font-bold transition-all flex items-center justify-center gap-2"
