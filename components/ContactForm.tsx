@@ -9,7 +9,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     // Redirect to WhatsApp
     const message = encodeURIComponent(t('contact.whatsapp.msg'));
-    window.open(`https://wa.me/5493462607606?text=${message}`, '_blank');
+    window.open(`https://wa.me/543462609800?text=${message}`, '_blank');
     setIsSubmitted(true);
   };
 
