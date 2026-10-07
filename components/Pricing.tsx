@@ -47,6 +47,10 @@ const Pricing: React.FC = () => {
                             <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
                             <span className="text-sm text-white/70">{t('pricing.basic.5')}</span>
                         </li>
+                        <li className="flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                            <span className="text-sm text-white/70">{t('pricing.basic.6')}</span>
+                        </li>
                     </ul>
                     <button 
                       onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

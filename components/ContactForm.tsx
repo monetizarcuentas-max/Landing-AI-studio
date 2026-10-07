@@ -26,28 +26,17 @@ const ContactForm: React.FC = () => {
               {t('contact.success.d1')} <br/>
               <span className="text-white font-semibold">{t('contact.success.d2')}</span>
             </p>
-            <div className="flex flex-col items-center gap-4 mt-2">
-              <p className="text-white font-medium mt-4">{t('contact.success.pdf')}</p>
-              <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-                <a 
-                  href="https://drive.google.com/file/d/1yyF7dL6sE83m9eUgRM8HStSaBkwYDOyq/view?usp=drive_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full text-sm font-bold transition-all flex items-center justify-center gap-2"
-                >
-                  <span className="material-symbols-outlined text-lg">download</span>
-                  PDF (Español)
-                </a>
-                <a 
-                  href="https://drive.google.com/file/d/1vd0LR2BshE4DXE_bVjhutIIukSsVfPeH/view?usp=drive_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full text-sm font-bold transition-all flex items-center justify-center gap-2"
-                >
-                  <span className="material-symbols-outlined text-lg">download</span>
-                  PDF (English)
-                </a>
-              </div>
+            <div className="flex flex-col items-center gap-4 mt-2 w-full">
+              <a 
+                href="https://calendly.com/sinergiadigitalinteligente/20min?month=2026-10&date=2026-10-08"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-bold py-4 px-8 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 active:scale-95 glow-primary shadow-xl shadow-primary/30 text-base"
+              >
+                <span className="material-symbols-outlined text-xl">calendar_month</span>
+                {t('contact.success.calendar')}
+                <span className="material-symbols-outlined text-lg">arrow_forward</span>
+              </a>
               <button 
                 onClick={() => setIsSubmitted(false)}
                 className="text-primary font-bold text-sm hover:underline mt-2"
