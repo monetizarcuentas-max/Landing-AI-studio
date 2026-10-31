@@ -11,7 +11,7 @@ interface LanguageContextType {
 const translations = {
   es: {
     'nav.book': 'Agendar Consulta',
-    'banner.urgency': 'Capacidad limitada: 5 proyectos mensuales. Reserva hoy tu auditoría de diagnóstico para asegurar tu cupo de Octubre.',
+    'banner.urgency': 'Capacidad limitada: 5 proyectos mensuales. Reserva hoy tu auditoría de diagnóstico para asegurar tu cupo de Noviembre.',
     'hero.badge': 'TRÁFICO + CONVERSIÓN AUTOMÁTICA B2B',
     'hero.title1': 'El sistema definitivo para escalar ',
     'hero.title2': 'tu negocio digitalmente',
